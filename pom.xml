@@ -12,6 +12,7 @@
     <modules>
         <module>java-core</module>
         <module>jersey-jetty-in-action</module>
+        <module>netty-in-action</module>
     </modules>
 
     <dependencies>
