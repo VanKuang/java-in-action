@@ -1,5 +1,5 @@
 # java-in-action
-Try interesting base on JAVA
+Try awesome functions in Java, open source framework. 
 
 # java-core
 Try pure java functions
