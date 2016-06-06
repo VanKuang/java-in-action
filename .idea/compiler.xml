@@ -24,14 +24,18 @@
         <processorPath useClasspath="true" />
         <module name="java-core" />
         <module name="jersey-jetty-in-action" />
+        <module name="mybatis-in-action" />
         <module name="netty-in-action" />
+        <module name="spring-in-action" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-core" target="1.5" />
       <module name="java-in-action" target="1.5" />
       <module name="jersey-jetty-in-action" target="1.5" />
+      <module name="mybatis-in-action" target="1.5" />
       <module name="netty-in-action" target="1.5" />
+      <module name="spring-in-action" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
