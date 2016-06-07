@@ -14,7 +14,7 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="org.h2.Driver"/>
-                <property name="url" value="dbc:h2:~/test"/>
+                <property name="url" value="jdbc:h2:mem:test"/>
                 <property name="username" value="sa"/>
                 <property name="password" value=""/>
             </dataSource>
