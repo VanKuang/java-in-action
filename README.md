@@ -9,3 +9,6 @@ Try to build RESTful server base on Jersey and Jetty as the web container
 
 # netty-in-action
 Try to build http server base on netty 3.x and 5.x
+
+# mybatis-in-action
+Try database operation base on mybatis
