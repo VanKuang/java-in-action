@@ -3,6 +3,7 @@ package cn.van.kuang.hello.world.java.ruleengine;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TemplateGenerator {
 
@@ -32,7 +33,7 @@ public class TemplateGenerator {
             return Collections.emptyList();
         }
 
-        List<String> templates = new ArrayList<String>();
+        List<String> templates = new ArrayList<>();
         for (int number = max; number >= min; number--) {
             String binaryString = preAppendZero(Integer.toBinaryString(number));
             char[] chars = binaryString.toCharArray();
@@ -56,13 +57,13 @@ public class TemplateGenerator {
             return Collections.emptyList();
         }
 
-        List<List<Column>> templates = new ArrayList<List<Column>>();
+        List<List<Column>> templates = new ArrayList<>();
 
         for (int number = max; number >= min; number--) {
             String binaryString = preAppendZero(Integer.toBinaryString(number));
             char[] chars = binaryString.toCharArray();
 
-            List<Column> template = new ArrayList<Column>();
+            List<Column> template = new ArrayList<>();
             for (int i = 0, length = chars.length; i < length; i++) {
                 Column column = new Column(orderedColumns[i].name, chars[i] == '0');
                 template.add(column);
@@ -76,13 +77,12 @@ public class TemplateGenerator {
     }
 
     private List<Column> restoreOriginalSequence(List<Column> template) {
-        List<Column> sequencedColumns = new ArrayList<Column>(template.size());
+        List<Column> sequencedColumns = new ArrayList<>(template.size());
         for (Column column : columns) {
-            for (Column templateColumn : template) {
-                if (column.name.equals(templateColumn.name)) {
-                    sequencedColumns.add(templateColumn);
-                }
-            }
+            sequencedColumns.addAll(
+                    template.stream()
+                            .filter(templateColumn -> column.name.equals(templateColumn.name))
+                            .collect(Collectors.toList()));
         }
         return sequencedColumns;
     }

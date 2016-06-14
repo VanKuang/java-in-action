@@ -54,16 +54,14 @@ public class NioSocketServer {
                         clientChannel.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
                         System.out.println("Accepted new connection from client: " + clientChannel);
 
-                        executorService.scheduleAtFixedRate(new Runnable() {
-                            public void run() {
-                                ByteBuffer byteBuffer = ByteBuffer.wrap("Hi Client".getBytes());
-                                try {
-                                    clientChannel.write(byteBuffer);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                                byteBuffer.clear();
+                        executorService.scheduleAtFixedRate((Runnable) () -> {
+                            ByteBuffer byteBuffer = ByteBuffer.wrap("Hi Client".getBytes());
+                            try {
+                                clientChannel.write(byteBuffer);
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
+                            byteBuffer.clear();
                         }, 3000, 3000, TimeUnit.MILLISECONDS);
                     } else if (key.isReadable()) {
                         SocketChannel clientChannel = (SocketChannel) key.channel();

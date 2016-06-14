@@ -96,7 +96,7 @@ public class SimpleRuleEngine {
     }
 
     private Map<String, String> initialiseCache() {
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
 
         map.put("V1#V2#V3#V4#V5", "JAVA");
         map.put("V1#V2#V3#V4#*", "C++");

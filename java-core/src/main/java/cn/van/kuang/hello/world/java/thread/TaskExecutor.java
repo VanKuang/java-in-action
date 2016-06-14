@@ -12,7 +12,7 @@ public class TaskExecutor {
     private final ExecutorService executors = Executors.newFixedThreadPool(10);
 
     public void execute(List<SimpleTask> tasks) throws Exception {
-        List<Future<String>> futures = new ArrayList<Future<String>>(tasks.size());
+        List<Future<String>> futures = new ArrayList<>(tasks.size());
         for (SimpleTask task : tasks) {
             Future<String> future = executors.submit(task);
             futures.add(future);
@@ -25,7 +25,7 @@ public class TaskExecutor {
 
     public static void main(String[] args) throws Exception {
 
-        List<SimpleTask> tasks = new ArrayList<SimpleTask>();
+        List<SimpleTask> tasks = new ArrayList<>();
         tasks.add(new SimpleTask("Task1"));
         tasks.add(new SimpleTask("Task2"));
         tasks.add(new SimpleTask("Task3"));

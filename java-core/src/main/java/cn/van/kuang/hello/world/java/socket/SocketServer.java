@@ -12,7 +12,11 @@ public class SocketServer {
         ServerSocket serverSocket = new ServerSocket(port);
         System.out.println("Going to accept request from client");
 
-        while (true) {
+        while (Thread.currentThread().isAlive()) {
+            if (Thread.currentThread().isInterrupted()) {
+                break;
+            }
+
             Socket clientSocket = serverSocket.accept();
 
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));

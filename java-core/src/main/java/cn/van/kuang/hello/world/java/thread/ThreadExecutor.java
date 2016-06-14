@@ -13,11 +13,7 @@ public class ThreadExecutor {
 
     private void tryGetResultFromThread() throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<String> future = executorService.submit(new Callable<String>() {
-            public String call() throws Exception {
-                return "Hi";
-            }
-        });
+        Future<String> future = executorService.submit(() -> "Hi");
         logger.info(future.get());
 
         executorService.shutdown();
@@ -26,11 +22,10 @@ public class ThreadExecutor {
     private void tryCancelRunningThread() {
         ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
 
-        ScheduledFuture<?> schedule = scheduledExecutorService.schedule(new Runnable() {
-            public void run() {
-                logger.info("DONE");
-            }
-        }, 2, TimeUnit.SECONDS);
+        ScheduledFuture<?> schedule = scheduledExecutorService.schedule(
+                (Runnable) () -> logger.info("DONE"),
+                2,
+                TimeUnit.SECONDS);
 
         try {
             Thread.sleep(1000L);
@@ -50,7 +45,7 @@ public class ThreadExecutor {
     private void tryHandleTonsOfTasksWithLimitedThreadPool() throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-        List<Future> futures = new ArrayList<Future>();
+        List<Future> futures = new ArrayList<>();
 
         List<Runnable> tasks = collectTasks();
         for (Runnable task : tasks) {
@@ -66,42 +61,38 @@ public class ThreadExecutor {
     }
 
     private List<Runnable> collectTasks() {
-        List<Runnable> tasks = new ArrayList<Runnable>();
+        List<Runnable> tasks = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             final int count = i;
-            tasks.add(new Runnable() {
-                public void run() {
-                    try {
-                        Thread.sleep(1000L);
-                    } catch (InterruptedException ignored) {
-                    }
-                    logger.info("Task{} Done", count);
+            tasks.add(() -> {
+                try {
+                    Thread.sleep(1000L);
+                } catch (InterruptedException ignored) {
                 }
+                logger.info("Task{} Done", count);
             });
         }
         return tasks;
     }
 
     private void tryThreadLocal() {
-        final ThreadLocal<Long> threadLocal = new ThreadLocal<Long>();
+        final ThreadLocal<Long> threadLocal = new ThreadLocal<>();
 
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
         int count = 0;
 
         while (count < 10) {
-            executorService.submit(new Runnable() {
-                public void run() {
-                    logger.info("Inside threadlocal: {}", threadLocal.get());
+            executorService.submit((Runnable) () -> {
+                logger.info("Inside threadlocal: {}", threadLocal.get());
 
-                    Long aLong = System.nanoTime();
-                    logger.info("Set {} to threadlocal", aLong);
-                    threadLocal.set(aLong);
+                Long aLong = System.nanoTime();
+                logger.info("Set {} to threadlocal", aLong);
+                threadLocal.set(aLong);
 
-                    try {
-                        Thread.sleep(1000L);
-                    } catch (InterruptedException ignored) {
-                    }
+                try {
+                    Thread.sleep(1000L);
+                } catch (InterruptedException ignored) {
                 }
             });
 

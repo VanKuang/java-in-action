@@ -34,7 +34,7 @@ public class EHCache {
     }
 
     public void cacheByHashMap(int sum) {
-        Map<Long, String> map = new HashMap<Long, String>();
+        Map<Long, String> map = new HashMap<>();
         map.put(1L, "KB");
         map.put(2L, "MJ");
         map.put(3L, "LBJ");
