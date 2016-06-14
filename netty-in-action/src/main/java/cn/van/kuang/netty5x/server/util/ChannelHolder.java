@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public final class ChannelHolder {
 
-    private static Map<ChannelId, TopicChannel> channels = new ConcurrentHashMap<ChannelId, TopicChannel>();
+    private static Map<ChannelId, TopicChannel> channels = new ConcurrentHashMap<>();
 
     public static void put(TopicChannel topicChannel) {
         channels.put(topicChannel.getChannel().id(), topicChannel);

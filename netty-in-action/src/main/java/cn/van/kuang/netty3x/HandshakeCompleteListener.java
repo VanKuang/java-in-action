@@ -29,11 +29,11 @@ public class HandshakeCompleteListener implements ChannelFutureListener {
     }
 
     private void startSendPing() {
-        Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(new Runnable() {
-            public void run() {
-                channel.write("PING");
-            }
-        }, 1000, 1000, TimeUnit.MILLISECONDS);
+        Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(
+                (Runnable) () -> channel.write("PING"),
+                1000,
+                1000,
+                TimeUnit.MILLISECONDS);
     }
 
 }

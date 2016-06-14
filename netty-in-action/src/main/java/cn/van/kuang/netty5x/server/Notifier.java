@@ -31,11 +31,9 @@ public class Notifier {
                 .build();
 
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(
-                new Runnable() {
-                    public void run() {
-                        doNotify(notificationA);
-                        doNotify(notificationB);
-                    }
+                (Runnable) () -> {
+                    doNotify(notificationA);
+                    doNotify(notificationB);
                 }, 60, 60, TimeUnit.SECONDS
         );
     }

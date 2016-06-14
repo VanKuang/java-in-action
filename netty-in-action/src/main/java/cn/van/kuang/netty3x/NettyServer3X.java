@@ -38,16 +38,12 @@ public class NettyServer3X {
 
         ServerBootstrap bootstrap = new ServerBootstrap(channelFactory);
 
-        bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
-            public ChannelPipeline getPipeline() throws Exception {
-                return Channels.pipeline(
-                        createSslHandler(sslEngine),
-                        new StringDecoder(),
-                        new StringEncoder(),
-                        new MessageHandler()
-                );
-            }
-        });
+        bootstrap.setPipelineFactory(() -> Channels.pipeline(
+                createSslHandler(sslEngine),
+                new StringDecoder(),
+                new StringEncoder(),
+                new MessageHandler()
+        ));
 
         bootstrap.bind(new InetSocketAddress(port));
 

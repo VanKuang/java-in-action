@@ -123,11 +123,9 @@ public class NettyClient {
 
         logger.info("Try to reconnect in {}ms later, times: {}", DEFAULT_RECONNECT_INTERVAL, retryTimes + 1);
 
-        reconnectService.schedule(new Runnable() {
-            public void run() {
-                retryTimes++;
-                start();
-            }
+        reconnectService.schedule((Runnable) () -> {
+            retryTimes++;
+            start();
         }, retryIntervalInMilSec, TimeUnit.MILLISECONDS);
     }
 

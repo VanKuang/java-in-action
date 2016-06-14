@@ -32,16 +32,12 @@ public class NettyClient3X {
 
         ClientBootstrap bootstrap = new ClientBootstrap(channelFactory);
 
-        bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
-            public ChannelPipeline getPipeline() throws Exception {
-                return Channels.pipeline(
-                        new SslHandler(sslEngine, SslHandler.getDefaultBufferPool(), false, new HashedWheelTimer(), 10000),
-                        new StringDecoder(),
-                        new StringEncoder(),
-                        new ClientHandler()
-                );
-            }
-        });
+        bootstrap.setPipelineFactory(() -> Channels.pipeline(
+                new SslHandler(sslEngine, SslHandler.getDefaultBufferPool(), false, new HashedWheelTimer(), 10000),
+                new StringDecoder(),
+                new StringEncoder(),
+                new ClientHandler()
+        ));
 
         bootstrap.connect(new InetSocketAddress("localhost", 9999));
     }

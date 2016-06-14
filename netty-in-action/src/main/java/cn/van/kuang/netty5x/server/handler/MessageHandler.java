@@ -24,7 +24,7 @@ public class MessageHandler extends ChannelHandlerAdapter {
             logger.info("Received message: {}", msg);
 
             TraceableRequest traceableRequest = (TraceableRequest) msg;
-            ctx.writeAndFlush(new Response<String>(traceableRequest.getId(), "Sync Result"));
+            ctx.writeAndFlush(new Response<>(traceableRequest.getId(), "Sync Result"));
         } else if (msg instanceof Subscription) {
             logger.info("Received subscription [{}]", msg);
 

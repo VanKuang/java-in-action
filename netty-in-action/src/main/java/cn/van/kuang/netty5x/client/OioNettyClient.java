@@ -101,7 +101,7 @@ public class OioNettyClient {
             }
         }
 
-        Response<String> tmpResponse = new Response<String>(response.getRequestId(), (String) response.getContent());
+        Response<String> tmpResponse = new Response<>(response.getRequestId(), (String) response.getContent());
 
         response = null;
 

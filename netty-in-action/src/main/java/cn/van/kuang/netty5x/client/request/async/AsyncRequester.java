@@ -20,10 +20,6 @@ public class AsyncRequester {
     }
 
     public <T> Future<Response<T>> requestAsync(final Request request) throws Exception {
-        return executorService.submit(new Callable<Response<T>>() {
-            public Response<T> call() throws Exception {
-                return requester.request(request);
-            }
-        });
+        return executorService.submit((Callable<Response<T>>) () -> requester.request(request));
     }
 }

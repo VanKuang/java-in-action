@@ -27,7 +27,7 @@ public class SyncRequester extends ChannelHandlerAdapter implements Requester {
 
     private CountDownLatch isChannelInitialised = new CountDownLatch(1);
 
-    private Map<Long, ResponseObserver> observerMap = new ConcurrentHashMap<Long, ResponseObserver>();
+    private Map<Long, ResponseObserver> observerMap = new ConcurrentHashMap<>();
 
     public <T> Response<T> request(Request request) throws Exception {
 
@@ -90,7 +90,7 @@ public class SyncRequester extends ChannelHandlerAdapter implements Requester {
     }
 
     private <T> ResponseObserver<T> registerResponseObserver(long requestId) {
-        ResponseObserver<T> responseObserver = new ResponseObserver<T>();
+        ResponseObserver<T> responseObserver = new ResponseObserver<>();
         observerMap.put(requestId, responseObserver);
 
         return responseObserver;
