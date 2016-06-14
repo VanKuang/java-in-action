@@ -21,7 +21,7 @@ public class MessageEventProducer {
             MessageEvent messageEvent = ringBuffer.get(sequence);
             messageEvent.setMessage(message);
         } finally {
-            logger.debug("Going to publish message: {}, sequence=[{}]", message, sequence);
+            logger.info("Going to publish message: {}, sequence=[{}]", message, sequence);
 
             ringBuffer.publish(sequence);
         }

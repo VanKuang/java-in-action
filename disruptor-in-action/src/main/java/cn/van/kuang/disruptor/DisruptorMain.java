@@ -1,7 +1,9 @@
 package cn.van.kuang.disruptor;
 
+import com.lmax.disruptor.BusySpinWaitStrategy;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
+import com.lmax.disruptor.dsl.ProducerType;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,9 +16,14 @@ public class DisruptorMain {
 
         MessageEventFactory messageEventFactory = new MessageEventFactory();
 
-        int bufferSize = 1024;
+        int bufferSize = 16;
 
-        Disruptor<MessageEvent> disruptor = new Disruptor<MessageEvent>(messageEventFactory, bufferSize, threadFactory);
+        Disruptor<MessageEvent> disruptor = new Disruptor<>(
+                messageEventFactory,
+                bufferSize,
+                threadFactory,
+                ProducerType.SINGLE,
+                new BusySpinWaitStrategy());
 
         disruptor.handleEventsWith(new MessageEventHandler());
 
@@ -26,29 +33,24 @@ public class DisruptorMain {
 
         final MessageEventProducer messageEventProducer = new MessageEventProducer(ringBuffer);
 
-        Runnable task = new Runnable() {
+        Runnable task = () -> {
+            int count = 0;
+            while (Thread.currentThread().isAlive()) {
+                if (Thread.currentThread().isInterrupted()) {
+                    break;
+                }
 
-            public void run() {
-                int count = 0;
-                while (Thread.currentThread().isAlive()) {
-                    if (Thread.currentThread().isInterrupted()) {
-                        break;
-                    }
+                messageEventProducer.produce("Message " + ++count);
 
-                    messageEventProducer.produce("Message " + ++count);
-
-                    try {
-                        Thread.sleep(10L);
-                    } catch (InterruptedException e) {
-                        Thread.interrupted();
-                    }
+                try {
+                    Thread.sleep(10L);
+                } catch (InterruptedException e) {
+                    Thread.interrupted();
                 }
             }
         };
 
         ExecutorService executor = Executors.newCachedThreadPool();
-        executor.submit(task);
-        executor.submit(task);
         executor.submit(task);
         executor.submit(task);
         executor.submit(task);

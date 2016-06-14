@@ -12,5 +12,8 @@ public class MessageEventHandler implements EventHandler<MessageEvent> {
                         long sequence,
                         boolean endOfBatch) throws Exception {
         logger.info("On Event: {}, sequence=[{}], endOfBatch=[{}]", messageEvent, sequence, endOfBatch);
+
+        // mock process need 20ms
+        Thread.sleep(20L);
     }
 }
