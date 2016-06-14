@@ -11,9 +11,6 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Path(Constants.PATH_ROOT)
 public class RootResource {
 

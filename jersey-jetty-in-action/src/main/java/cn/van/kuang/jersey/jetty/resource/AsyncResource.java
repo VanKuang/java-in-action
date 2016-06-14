@@ -7,16 +7,16 @@ import org.slf4j.LoggerFactory;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.container.*;
+import javax.ws.rs.container.AsyncResponse;
+import javax.ws.rs.container.CompletionCallback;
+import javax.ws.rs.container.ConnectionCallback;
+import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Path(Constants.PATH_ASYNC)
 @Produces(MediaType.TEXT_PLAIN)
 public class AsyncResource {
@@ -32,62 +32,48 @@ public class AsyncResource {
 
         logger.info("Received request, id: {}", id);
 
-        executor.submit(new Runnable() {
-            public void run() {
+        executor.submit((Runnable) () -> {
 
-                try {
-                    Thread.sleep(1000L);
-                } catch (InterruptedException ignored) {
+            try {
+                Thread.sleep(1000L);
+            } catch (InterruptedException ignored) {
 
-                }
-
-                response.resume("Long time query Result");
-
-                logger.info("Resume result for id: {}", id);
             }
+
+            response.resume("Long time query Result");
+
+            logger.info("Resume result for id: {}", id);
         });
     }
 
     @GET
     @Path("timeout")
     public void asyncQueryAndTimeout(@Suspended final AsyncResponse response) {
-        response.register(new CompletionCallback() {
-            public void onComplete(Throwable throwable) {
-                logger.info("Async callback invoked");
-            }
-        });
+        response.register((CompletionCallback) throwable -> logger.info("Async callback invoked"));
 
-        response.register(new ConnectionCallback() {
-            public void onDisconnect(AsyncResponse asyncResponse) {
-                logger.info("Connection closed");
-            }
-        });
+        response.register((ConnectionCallback) asyncResponse -> logger.info("Connection closed"));
 
-        response.setTimeoutHandler(new TimeoutHandler() {
-            public void handleTimeout(AsyncResponse asyncResponse) {
+        response.setTimeoutHandler(asyncResponse -> {
 
-                logger.info("Timeout and resume 'service unavailable'");
+            logger.info("Timeout and resume 'service unavailable'");
 
-                response.resume(
-                        Response.status(
-                                Response.Status.SERVICE_UNAVAILABLE
-                        ).build()
-                );
-            }
+            response.resume(
+                    Response.status(
+                            Response.Status.SERVICE_UNAVAILABLE
+                    ).build()
+            );
         });
         response.setTimeout(3, TimeUnit.SECONDS);
 
-        executor.submit(new Runnable() {
-            public void run() {
+        executor.submit((Runnable) () -> {
 
-                try {
-                    Thread.sleep(5000L);
-                } catch (InterruptedException ignored) {
+            try {
+                Thread.sleep(5000L);
+            } catch (InterruptedException ignored) {
 
-                }
-
-                response.resume("Long time query result");
             }
+
+            response.resume("Long time query result");
         });
     }
 }

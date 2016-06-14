@@ -6,9 +6,6 @@ import javax.ws.rs.container.DynamicFeature;
 import javax.ws.rs.container.ResourceInfo;
 import javax.ws.rs.core.FeatureContext;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 public class DynamicBinding implements DynamicFeature {
 
     public void configure(ResourceInfo resourceInfo, FeatureContext featureContext) {

@@ -8,9 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Method;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 public class RequestEventListenerImpl implements RequestEventListener {
 
     private final static Logger logger = LoggerFactory.getLogger(RequestEventListenerImpl.class);

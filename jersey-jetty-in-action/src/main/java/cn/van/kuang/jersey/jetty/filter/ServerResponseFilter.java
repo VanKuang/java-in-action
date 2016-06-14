@@ -5,9 +5,6 @@ import javax.ws.rs.container.ContainerResponseContext;
 import javax.ws.rs.container.ContainerResponseFilter;
 import java.io.IOException;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 public class ServerResponseFilter implements ContainerResponseFilter {
 
     public void filter(ContainerRequestContext requestContext,

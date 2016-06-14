@@ -7,9 +7,6 @@ import org.glassfish.jersey.server.monitoring.RequestEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 public class ApplicationListenerImpl implements ApplicationEventListener {
 
     private final static Logger logger = LoggerFactory.getLogger(ApplicationListenerImpl.class);

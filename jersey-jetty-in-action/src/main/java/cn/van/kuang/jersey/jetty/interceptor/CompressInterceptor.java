@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.zip.GZIPOutputStream;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Compress
 public class CompressInterceptor implements WriterInterceptor {
 

@@ -10,9 +10,6 @@ import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Singleton
 @Path(Constants.PATH_BROADCAST)
 public class BroadcastResource {

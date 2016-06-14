@@ -12,9 +12,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.*;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Path(Constants.PATH_EVENTS)
 public class ServerSentEventResource {
 
@@ -22,35 +19,31 @@ public class ServerSentEventResource {
     @Path("chunk")
     @Produces(MediaType.TEXT_PLAIN)
     public ChunkedOutput<String> queryChunk() {
-        final ChunkedOutput<String> output = new ChunkedOutput<String>(String.class, "\r\n");
+        final ChunkedOutput<String> output = new ChunkedOutput<>(String.class, "\r\n");
 
-        new Thread(new Runnable() {
-            public void run() {
+        new Thread(() -> {
+            try {
+                FileInputStream fileInputStream = new FileInputStream(new File("/Users/VanKuang/Development/workspace/java-in-action/jersey-jetty-in-action/src/main/java/cn/van/jersey/jetty/resource/QueryResource.java"));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
 
-                try {
-                    FileInputStream fileInputStream = new FileInputStream(new File("/Users/VanKuang/Development/workspace/java-in-action/jersey-jetty-in-action/src/main/java/cn/van/jersey/jetty/resource/QueryResource.java"));
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+                String line = bufferedReader.readLine();
+                while (line != null) {
+                    Thread.sleep(50L);
 
-                    String line = bufferedReader.readLine();
-                    while (line != null) {
-                        Thread.sleep(50L);
+                    output.write(line);
 
-                        output.write(line);
-
-                        line = bufferedReader.readLine();
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        output.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    line = bufferedReader.readLine();
                 }
-
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    output.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
         }).start();
 
         return output;
@@ -62,29 +55,26 @@ public class ServerSentEventResource {
     public EventOutput getEvents() {
         final EventOutput eventOutput = new EventOutput();
 
-        new Thread(new Runnable() {
-            public void run() {
+        new Thread(() -> {
+            try {
+                for (int i = 0, length = 10; i < length; i++) {
+                    final OutboundEvent.Builder builder = new OutboundEvent.Builder();
+                    builder.name("message-to-client");
+                    builder.data(String.class, "Message " + i);
 
-                try {
-                    for (int i = 0, length = 10; i < length; i++) {
-                        final OutboundEvent.Builder builder = new OutboundEvent.Builder();
-                        builder.name("message-to-client");
-                        builder.data(String.class, "Message " + i);
-
-                        final OutboundEvent outboundEvent = builder.build();
-                        eventOutput.write(outboundEvent);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        eventOutput.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    final OutboundEvent outboundEvent = builder.build();
+                    eventOutput.write(outboundEvent);
                 }
-
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    eventOutput.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
         }).start();
 
         return eventOutput;

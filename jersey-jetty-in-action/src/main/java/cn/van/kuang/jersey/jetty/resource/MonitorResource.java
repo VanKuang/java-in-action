@@ -10,9 +10,6 @@ import javax.inject.Provider;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 @Path(Constants.PATH_MONITOR)
 public class MonitorResource {
 

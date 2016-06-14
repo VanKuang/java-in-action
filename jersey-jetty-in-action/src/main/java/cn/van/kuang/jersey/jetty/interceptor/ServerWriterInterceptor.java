@@ -11,9 +11,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.zip.GZIPOutputStream;
 
-/**
- * Created by VanKuang on 16/3/14.
- */
 public class ServerWriterInterceptor implements WriterInterceptor {
 
     private final static Logger logger = LoggerFactory.getLogger(ServerWriterInterceptor.class);
