@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.data.structure.recursive;
+package cn.van.kuang.java.core.data.structure.recursion;
 
 public class BinarySearch {
 
