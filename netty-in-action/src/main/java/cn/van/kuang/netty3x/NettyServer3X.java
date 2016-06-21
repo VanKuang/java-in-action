@@ -21,6 +21,7 @@ public class NettyServer3X {
 
     private final int port;
     private HashedWheelTimer wheelTimer = new HashedWheelTimer();
+    private ServerBootstrap bootstrap;
 
     public NettyServer3X(int port) {
         this.port = port;
@@ -37,7 +38,7 @@ public class NettyServer3X {
                 Executors.newCachedThreadPool(),
                 Executors.newCachedThreadPool());
 
-        ServerBootstrap bootstrap = new ServerBootstrap(channelFactory);
+        bootstrap = new ServerBootstrap(channelFactory);
 
         bootstrap.setPipelineFactory(() -> Channels.pipeline(
                 createSslHandler(sslEngine),
@@ -49,6 +50,13 @@ public class NettyServer3X {
         bootstrap.bind(new InetSocketAddress(port));
 
         logger.info("Started netty server with port [{}]", port);
+    }
+
+    public void stop() {
+        if (bootstrap != null) {
+            bootstrap.releaseExternalResources();
+            bootstrap.shutdown();
+        }
     }
 
     private SslHandler createSslHandler(SSLEngine sslEngine) {
@@ -91,6 +99,9 @@ public class NettyServer3X {
     }
 
     public static void main(String[] args) throws Exception {
-        new NettyServer3X(9999).start();
+        NettyServer3X server = new NettyServer3X(9999);
+        server.start();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(server::stop));
     }
 }

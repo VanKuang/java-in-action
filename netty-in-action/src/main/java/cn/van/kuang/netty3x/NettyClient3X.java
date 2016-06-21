@@ -21,6 +21,7 @@ public class NettyClient3X {
 
     private final static int MAX_WORKER_THREAD_COUNT = 5;
     private final HashedWheelTimer timer = new HashedWheelTimer();
+    private ClientBootstrap bootstrap;
 
     public void start() throws Exception {
         System.setProperty("javax.net.ssl.trustStore", "/Users/VanKuang/Development/workspace/java-in-action/keystore.jks");
@@ -34,7 +35,7 @@ public class NettyClient3X {
                 Executors.newCachedThreadPool(),
                 MAX_WORKER_THREAD_COUNT);
 
-        ClientBootstrap bootstrap = new ClientBootstrap(channelFactory);
+        bootstrap = new ClientBootstrap(channelFactory);
 
         bootstrap.setPipelineFactory(() -> Channels.pipeline(
                 new SslHandler(sslEngine, SslHandler.getDefaultBufferPool(), false, timer, 10000),
@@ -44,6 +45,15 @@ public class NettyClient3X {
         ));
 
         bootstrap.connect(new InetSocketAddress("localhost", 9999));
+    }
+
+    public void stop() {
+        if (bootstrap != null) {
+            bootstrap.releaseExternalResources();
+            bootstrap.shutdown();
+        }
+
+        logger.info("STOPPED");
     }
 
     class ClientHandler extends SimpleChannelHandler {
@@ -78,6 +88,9 @@ public class NettyClient3X {
     }
 
     public static void main(String[] args) throws Exception {
-        new NettyClient3X().start();
+        NettyClient3X client = new NettyClient3X();
+        client.start();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(client::stop));
     }
 }
