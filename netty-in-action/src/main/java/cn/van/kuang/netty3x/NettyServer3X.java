@@ -20,13 +20,14 @@ public class NettyServer3X {
     private final static Logger logger = LoggerFactory.getLogger(NettyServer3X.class);
 
     private final int port;
+    private HashedWheelTimer wheelTimer = new HashedWheelTimer();
 
     public NettyServer3X(int port) {
         this.port = port;
     }
 
     public void start() throws Exception {
-        System.setProperty("javax.net.ssl.keyStore", "/Users/VanKuang/Development/workspace/hello-world-in-java/src/main/resources/keystore");
+        System.setProperty("javax.net.ssl.keyStore", "/Users/VanKuang/Development/workspace/java-in-action/keystore.jks");
         System.setProperty("javax.net.ssl.keyStorePassword", "1234@qwer");
 
         final SSLEngine sslEngine = SSLContext.getDefault().createSSLEngine();
@@ -55,7 +56,7 @@ public class NettyServer3X {
                 sslEngine,
                 SslHandler.getDefaultBufferPool(),
                 false,
-                new HashedWheelTimer(),
+                wheelTimer,
                 10000);
         sslHandler.setIssueHandshake(true);
         sslHandler.setCloseOnSSLException(true);

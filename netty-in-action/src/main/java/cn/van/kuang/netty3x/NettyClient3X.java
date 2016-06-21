@@ -19,8 +19,10 @@ public class NettyClient3X {
 
     private final static Logger logger = LoggerFactory.getLogger(NettyClient3X.class);
 
+    private final HashedWheelTimer timer = new HashedWheelTimer();
+
     public void start() throws Exception {
-        System.setProperty("javax.net.ssl.trustStore", "/Users/VanKuang/Development/workspace/hello-world-in-java/src/main/resources/keystore");
+        System.setProperty("javax.net.ssl.trustStore", "/Users/VanKuang/Development/workspace/java-in-action/keystore.jks");
         System.setProperty("javax.net.ssl.trustStorePassword", "1234@qwer");
 
         final SSLEngine sslEngine = SSLContext.getDefault().createSSLEngine();
@@ -28,12 +30,12 @@ public class NettyClient3X {
 
         NioClientSocketChannelFactory channelFactory = new NioClientSocketChannelFactory(
                 Executors.newCachedThreadPool(),
-                Executors.newCachedThreadPool());
+                Executors.newCachedThreadPool(), 1);
 
         ClientBootstrap bootstrap = new ClientBootstrap(channelFactory);
 
         bootstrap.setPipelineFactory(() -> Channels.pipeline(
-                new SslHandler(sslEngine, SslHandler.getDefaultBufferPool(), false, new HashedWheelTimer(), 10000),
+                new SslHandler(sslEngine, SslHandler.getDefaultBufferPool(), false, timer, 10000),
                 new StringDecoder(),
                 new StringEncoder(),
                 new ClientHandler()
