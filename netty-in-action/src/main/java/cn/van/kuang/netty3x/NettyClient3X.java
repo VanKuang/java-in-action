@@ -19,6 +19,7 @@ public class NettyClient3X {
 
     private final static Logger logger = LoggerFactory.getLogger(NettyClient3X.class);
 
+    private final static int MAX_WORKER_THREAD_COUNT = 5;
     private final HashedWheelTimer timer = new HashedWheelTimer();
 
     public void start() throws Exception {
@@ -30,7 +31,8 @@ public class NettyClient3X {
 
         NioClientSocketChannelFactory channelFactory = new NioClientSocketChannelFactory(
                 Executors.newCachedThreadPool(),
-                Executors.newCachedThreadPool(), 1);
+                Executors.newCachedThreadPool(),
+                MAX_WORKER_THREAD_COUNT);
 
         ClientBootstrap bootstrap = new ClientBootstrap(channelFactory);
 
