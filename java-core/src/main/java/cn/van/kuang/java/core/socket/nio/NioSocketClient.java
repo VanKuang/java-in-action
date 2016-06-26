@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.socket;
+package cn.van.kuang.java.core.socket.nio;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -9,7 +9,8 @@ public class NioSocketClient {
     public void start(String host, int port) {
         try {
             InetSocketAddress socketAddress = new InetSocketAddress(host, port);
-            final SocketChannel socketChannel = SocketChannel.open(socketAddress);
+            SocketChannel socketChannel = SocketChannel.open(socketAddress);
+            socketChannel.configureBlocking(false);
 
             System.out.println("Connected to server");
 

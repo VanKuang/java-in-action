@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.socket;
+package cn.van.kuang.java.core.socket.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
