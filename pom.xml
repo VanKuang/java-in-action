@@ -17,6 +17,7 @@
         <module>mybatis-in-action</module>
         <module>disruptor-in-action</module>
         <module>zookeeper-in-action</module>
+        <module>spring-boot-in-action</module>
     </modules>
 
     <dependencies>
