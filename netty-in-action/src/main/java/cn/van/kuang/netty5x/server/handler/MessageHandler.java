@@ -32,6 +32,8 @@ public class MessageHandler extends ChannelHandlerAdapter {
             TopicChannel topicChannel = new TopicChannel(subscription.getTopics(), ctx.channel());
 
             ChannelHolder.put(topicChannel);
+        } else {
+            logger.info("Receive {}", msg);
         }
     }
 }
