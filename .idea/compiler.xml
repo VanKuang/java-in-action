@@ -73,6 +73,13 @@
         <processorPath useClasspath="true" />
         <module name="spring-boot-in-action" />
       </profile>
+      <profile default="false" name="Annotation profile for rxjava-in-action" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="rxjava-in-action" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="disruptor-in-action" target="1.8" />
@@ -81,6 +88,7 @@
       <module name="jersey-jetty-in-action" target="1.8" />
       <module name="mybatis-in-action" target="1.8" />
       <module name="netty-in-action" target="1.8" />
+      <module name="rxjava-in-action" target="1.8" />
       <module name="spring-boot-in-action" target="1.8" />
       <module name="spring-in-action" target="1.8" />
       <module name="zookeeper-in-action" target="1.8" />

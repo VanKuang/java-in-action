@@ -18,6 +18,7 @@
         <module>disruptor-in-action</module>
         <module>zookeeper-in-action</module>
         <module>spring-boot-in-action</module>
+        <module>rxjava-in-action</module>
     </modules>
 
     <dependencies>

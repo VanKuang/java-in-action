@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework:spring-webmvc:5.0.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161016.031157-323.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161125.123919-428.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161016.031157-323-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161125.123919-428-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161016.031157-323-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.0.BUILD-SNAPSHOT/spring-webmvc-5.0.0.BUILD-20161125.123919-428-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
