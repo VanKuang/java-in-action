@@ -14,13 +14,13 @@ Try to build http server base on netty 3.x and 5.x
 Try database operation base on mybatis
 
 # disruptor-in-action
-Try to play disruptor</br>
-https://lmax-exchange.github.io/disruptor/</br>
+Try to play disruptor  
+https://lmax-exchange.github.io/disruptor/  
 http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
 
 # rxjava-in-acition
-Try to play reactive programming with RxJava
-http://reactivex.io/
-https://github.com/ReactiveX/RxJava
-
+Try to play reactive programming with RxJava  
+http://reactivex.io/  
+https://github.com/ReactiveX/RxJava  
+  
 I think use RxJava to deal with legacy code will be awesome 
