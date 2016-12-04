@@ -17,3 +17,10 @@ Try database operation base on mybatis
 Try to play disruptor</br>
 https://lmax-exchange.github.io/disruptor/</br>
 http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
+
+# rxjava-in-acition
+Try to play reactive programming with RxJava
+http://reactivex.io/
+https://github.com/ReactiveX/RxJava
+
+I think use RxJava to deal with legacy code will be awesome 
