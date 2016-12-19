@@ -1,18 +1,18 @@
-package cn.van.kuang.java.core.design.pattern.factory.product;
+package cn.van.kuang.java.core.design.pattern.factory.vo;
 
 import java.math.BigDecimal;
 
-public class Screen implements Product {
+public class Cable implements Product {
 
     private final BigDecimal price;
 
-    public Screen(BigDecimal price) {
+    public Cable(BigDecimal price) {
         this.price = price;
     }
 
     @Override
     public String name() {
-        return "Screen";
+        return "Cable";
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Screen implements Product {
 
     @Override
     public String toString() {
-        return "Screen{" +
+        return "Cable{" +
                 "name=" + name() +
                 ", price=" + price +
                 '}';

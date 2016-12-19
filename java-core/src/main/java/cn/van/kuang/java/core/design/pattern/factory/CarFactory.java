@@ -1,7 +1,7 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
-import cn.van.kuang.java.core.design.pattern.factory.product.Car;
-import cn.van.kuang.java.core.design.pattern.factory.product.Product;
+import cn.van.kuang.java.core.design.pattern.factory.vo.Car;
+import cn.van.kuang.java.core.design.pattern.factory.vo.Product;
 
 import java.math.BigDecimal;
 

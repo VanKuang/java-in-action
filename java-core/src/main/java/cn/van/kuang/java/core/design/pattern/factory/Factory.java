@@ -1,6 +1,6 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
-import cn.van.kuang.java.core.design.pattern.factory.product.Product;
+import cn.van.kuang.java.core.design.pattern.factory.vo.Product;
 
 public interface Factory {
 
