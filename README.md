@@ -5,7 +5,8 @@ Try awesome functions in Java, open source framework.
 Try pure java functions  
 
 ### Design pattern
-#### Creational design pattern
+
+#### Creational patterns
 All about class instantiation, object creation, it abstract the object create process.
 Client just facing the interface, don't need care about how the object create.
 So that separate the object creation and use.
@@ -16,6 +17,13 @@ So that separate the object creation and use.
 * Builder
 * Prototype
 * Singleton.
+
+#### Structural patterns
+
+**Including**
+* Adapter
+* Bridge
+* Composite
 
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
