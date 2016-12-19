@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.design.pattern.factory.abstractfactory;
+package cn.van.kuang.java.core.design.pattern.factory;
 
 public interface Factory {
 
