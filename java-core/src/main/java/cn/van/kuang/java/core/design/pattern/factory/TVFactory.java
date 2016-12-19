@@ -1,5 +1,10 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
+import cn.van.kuang.java.core.design.pattern.factory.product.Cable;
+import cn.van.kuang.java.core.design.pattern.factory.product.Product;
+import cn.van.kuang.java.core.design.pattern.factory.product.Screen;
+import cn.van.kuang.java.core.design.pattern.factory.product.TV;
+
 import java.math.BigDecimal;
 
 public enum TVFactory implements Factory {

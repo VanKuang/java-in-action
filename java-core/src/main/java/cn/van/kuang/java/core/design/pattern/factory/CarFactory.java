@@ -1,14 +1,23 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
+import cn.van.kuang.java.core.design.pattern.factory.product.Car;
+import cn.van.kuang.java.core.design.pattern.factory.product.Product;
+
 import java.math.BigDecimal;
 
-public enum CarFactory implements Factory {
+public class CarFactory {
 
-    INSTANCE {
-        @Override
-        public Product create() {
-            return new Car("Tesla", new BigDecimal(1000000));
-        }
+    public static Product create() {
+        return new Car("Tesla", new BigDecimal(1000000));
+    }
+
+    private CarFactory() throws IllegalAccessException {
+        throw new IllegalAccessException("");
+    }
+
+    public static void main(String[] args) {
+        Product car = CarFactory.create();
+        System.out.println(car);
     }
 
 }

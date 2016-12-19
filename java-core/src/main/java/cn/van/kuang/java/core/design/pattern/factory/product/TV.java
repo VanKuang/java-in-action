@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.design.pattern.factory;
+package cn.van.kuang.java.core.design.pattern.factory.product;
 
 import java.math.BigDecimal;
 

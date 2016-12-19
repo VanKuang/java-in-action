@@ -1,18 +1,20 @@
-package cn.van.kuang.java.core.design.pattern.factory;
+package cn.van.kuang.java.core.design.pattern.factory.product;
 
 import java.math.BigDecimal;
 
-public class Cable implements Product {
+public class Car implements Product {
 
+    private final String name;
     private final BigDecimal price;
 
-    public Cable(BigDecimal price) {
+    public Car(String name, BigDecimal price) {
+        this.name = name;
         this.price = price;
     }
 
     @Override
     public String name() {
-        return "Cable";
+        return this.name;
     }
 
     @Override
@@ -22,8 +24,8 @@ public class Cable implements Product {
 
     @Override
     public String toString() {
-        return "Cable{" +
-                "name=" + name() +
+        return "Car{" +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }

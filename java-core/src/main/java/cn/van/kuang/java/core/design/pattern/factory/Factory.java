@@ -1,5 +1,7 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
+import cn.van.kuang.java.core.design.pattern.factory.product.Product;
+
 public interface Factory {
 
     Product create();
@@ -7,9 +9,6 @@ public interface Factory {
     static void main(String[] args) {
         Product tv = TVFactory.INSTANCE.create();
         System.out.println(tv);
-
-        Product car = CarFactory.INSTANCE.create();
-        System.out.println(car);
     }
 
 }
