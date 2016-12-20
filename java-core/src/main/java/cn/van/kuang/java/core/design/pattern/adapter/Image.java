@@ -7,7 +7,6 @@ public class Image {
     private final int width;
     private final int height;
 
-
     public Image(int id, String name, int width, int height) {
         this.id = id;
         this.name = name;
