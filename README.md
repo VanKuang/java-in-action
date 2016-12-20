@@ -25,6 +25,7 @@ So that separate the object creation and use.
 * Bridge
 * Composite
 * Decorator
+* Facade
 
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
