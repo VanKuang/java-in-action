@@ -16,7 +16,7 @@ public class JVM {
         initializationer = new Initializationer();
     }
 
-    void run() {
+    public void run() {
         classLoader.load();
         verifier.verify();
         preparationer.prepare();
