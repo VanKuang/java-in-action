@@ -16,7 +16,7 @@ So that separate the object creation and use.
 * Factory Method
 * Builder
 * Prototype
-* Singleton.
+* Singleton
 
 #### Structural patterns
 
@@ -24,6 +24,7 @@ So that separate the object creation and use.
 * Adapter
 * Bridge
 * Composite
+* Decorator
 
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
