@@ -2,14 +2,25 @@ package cn.van.kuang.java.core.design.pattern.adapter;
 
 public class Image {
 
+    private final int id;
+    private final String name;
     private final int width;
     private final int height;
-    private final String name;
 
-    public Image(int width, int height, String name) {
+
+    public Image(int id, String name, int width, int height) {
+        this.id = id;
+        this.name = name;
         this.width = width;
         this.height = height;
-        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getWidth() {
@@ -20,16 +31,13 @@ public class Image {
         return height;
     }
 
-    public String getName() {
-        return name;
-    }
-
     @Override
     public String toString() {
         return "Image{" +
-                "width=" + width +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", width=" + width +
                 ", height=" + height +
-                ", name=" + name +
                 '}';
     }
 }
