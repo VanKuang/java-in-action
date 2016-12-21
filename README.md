@@ -31,6 +31,11 @@ Decouple between classes/objects, so that system will be easy to extend, easy to
 * Flyweight
 * Proxy
 
+#### Behavioral patterns
+
+**Including**
+* Chain of Responsibility
+
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
 
