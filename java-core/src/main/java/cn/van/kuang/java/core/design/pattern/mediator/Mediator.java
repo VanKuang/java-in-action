@@ -20,6 +20,8 @@ public class Mediator {
     }
 
     public void onMessage(Message msg) {
+        System.out.println(msg.from().name() + " said \"" + msg.content() + "\"");
+
         String content = "[From " + msg.from().name() + "]--\"" + msg.content() + "\"";
 
         if (msg instanceof GroupByTypeMessage) {
