@@ -38,6 +38,7 @@ Decouple between classes/objects, so that system will be easy to extend, easy to
 * Command
 * Interpreter
 * Iterator
+* Mediator
 
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
