@@ -5,13 +5,17 @@ public interface Visitor {
     void visit(Staff staff);
 
     static void main(String[] args) {
-        Developer developer = new Developer();
-        Tester tester = new Tester();
+        Staff developer = new Developer();
+        Staff tester = new Tester();
 
-        Boss boss = new Boss();
+        Visitor boss = new Boss();
+        Visitor hr = new HR();
 
         developer.accept(boss);
         tester.accept(boss);
+
+        developer.accept(hr);
+        tester.accept(hr);
     }
 
 }
