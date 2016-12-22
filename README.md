@@ -42,6 +42,7 @@ Decouple between classes/objects, so that system will be easy to extend, easy to
 * Memento
 * Observer
 * State
+* Strategy
 
 ## jersey-jetty-in-action
 Try to build RESTful server base on Jersey and Jetty as the web container
