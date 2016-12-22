@@ -9,14 +9,18 @@ Try pure java functions
 #### Creational patterns
 All about class instantiation, object creation, it abstract the object create process.  
 Client just facing the interface, don't need care about how the object create.  
-So that separate the object creation and use.
+So that separate the object creation and usage.
 
 **Including**
-* Abstract Factory
+* Abstract Factory  
+  Create a family of related objects
 * Factory Method
-* Builder
-* Prototype
-* Singleton
+* Builder  
+  Step by step to create a complicated object
+* Prototype  
+  Creating object by copy from prototypes.
+* Singleton  
+  Only one instance can be created at the system.
 
 #### Structural patterns
 About how to create a bigger, stronger system.  
