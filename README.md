@@ -32,6 +32,9 @@ Decouple between classes/objects, so that system will be easy to extend, easy to
 * Proxy
 
 #### Behavioral patterns
+Define the communication pattern between objects to increasing the flexibility.  
+This patterns define the responsibility of classes and objects.  
+It include two kinds of patterns, one is class  behavioral pattern, another is object behavioral pattern.
 
 **Including**
 * Chain of Responsibility
