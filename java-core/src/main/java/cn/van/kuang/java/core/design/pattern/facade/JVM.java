@@ -1,6 +1,10 @@
 package cn.van.kuang.java.core.design.pattern.facade;
 
-public class JVM {
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public enum JVM {
+
+    INSTANCE;
 
     private ClassLoader classLoader;
     private Verifier verifier;
@@ -8,15 +12,13 @@ public class JVM {
     private Resolutioner resolutioner;
     private Initializationer initializationer;
 
-    public JVM() {
-        classLoader = new ClassLoader();
-        verifier = new Verifier();
-        preparationer = new Preparationer();
-        resolutioner = new Resolutioner();
-        initializationer = new Initializationer();
-    }
+    private AtomicBoolean isInitialised = new AtomicBoolean(false);
 
     public void run() {
+        if (isInitialised.compareAndSet(false, true)) {
+            init();
+        }
+
         classLoader.load();
         verifier.verify();
         preparationer.prepare();
@@ -24,9 +26,17 @@ public class JVM {
         initializationer.init();
     }
 
+    private void init() {
+        classLoader = new ClassLoader();
+        verifier = new Verifier();
+        preparationer = new Preparationer();
+        resolutioner = new Resolutioner();
+        initializationer = new Initializationer();
+    }
+
     public static void main(String[] args) {
-        JVM jvm = new JVM();
-        jvm.run();
+        JVM.INSTANCE.run();
+        JVM.INSTANCE.run();
     }
 
 }
