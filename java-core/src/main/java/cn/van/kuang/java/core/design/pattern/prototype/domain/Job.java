@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.design.pattern.prototype.vo;
+package cn.van.kuang.java.core.design.pattern.prototype.domain;
 
 public interface Job {
 

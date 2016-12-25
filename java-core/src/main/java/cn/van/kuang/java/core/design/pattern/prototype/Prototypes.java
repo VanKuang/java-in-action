@@ -1,8 +1,8 @@
 package cn.van.kuang.java.core.design.pattern.prototype;
 
-import cn.van.kuang.java.core.design.pattern.prototype.vo.Job;
-import cn.van.kuang.java.core.design.pattern.prototype.vo.Manager;
-import cn.van.kuang.java.core.design.pattern.prototype.vo.Programer;
+import cn.van.kuang.java.core.design.pattern.prototype.domain.Job;
+import cn.van.kuang.java.core.design.pattern.prototype.domain.Manager;
+import cn.van.kuang.java.core.design.pattern.prototype.domain.Programer;
 
 import java.util.HashMap;
 import java.util.Map;

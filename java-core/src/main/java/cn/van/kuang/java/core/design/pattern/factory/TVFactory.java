@@ -1,9 +1,9 @@
 package cn.van.kuang.java.core.design.pattern.factory;
 
-import cn.van.kuang.java.core.design.pattern.factory.vo.Cable;
-import cn.van.kuang.java.core.design.pattern.factory.vo.Product;
-import cn.van.kuang.java.core.design.pattern.factory.vo.Screen;
-import cn.van.kuang.java.core.design.pattern.factory.vo.TV;
+import cn.van.kuang.java.core.design.pattern.factory.domain.Cable;
+import cn.van.kuang.java.core.design.pattern.factory.domain.Product;
+import cn.van.kuang.java.core.design.pattern.factory.domain.Screen;
+import cn.van.kuang.java.core.design.pattern.factory.domain.TV;
 
 import java.math.BigDecimal;
 

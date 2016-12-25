@@ -1,16 +1,16 @@
-package cn.van.kuang.java.core.design.pattern.prototype.vo;
+package cn.van.kuang.java.core.design.pattern.prototype.domain;
 
-public class Manager implements Job {
+public class Programer implements Job {
 
     private final String title;
 
-    public Manager(String title) {
+    public Programer(String title) {
         this.title = title;
     }
 
     @Override
     public Job clone() {
-        return new Manager(title);
+        return new Programer(title);
     }
 
     @Override
