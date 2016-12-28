@@ -1,4 +1,4 @@
-package cn.van.kuang.java.core.algorithms;
+package cn.van.kuang.java.core.algorithms.utils;
 
 import java.util.Arrays;
 

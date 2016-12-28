@@ -4,19 +4,27 @@ import cn.van.kuang.java.core.algorithms.utils.ArrayHelper;
 import cn.van.kuang.java.core.algorithms.utils.Checker;
 import cn.van.kuang.java.core.algorithms.utils.Printer;
 
-public final class Selection implements Algorithm {
+public final class Shell implements Algorithm {
 
-    private static final String NAME = "Selection";
+    private static final String NAME = "Shell";
 
     public static void sort(int[] integers) {
         Checker.isNotNull(integers);
 
-        for (int i = 0, length = integers.length; i < length; i++) {
-            for (int j = i + 1; j < length; j++) {
-                if (integers[i] > integers[j]) {
-                    ArrayHelper.swap(integers, i, j);
+        int length = integers.length;
+        int h = 1;
+
+        while (h < length / 3) {
+            h = 3 * h + 1;
+        }
+
+        while (h >= 1) {
+            for (int i = h; i < length; i++) {
+                for (int j = i; j >= h && integers[j] < integers[j - h]; j -= h) {
+                    ArrayHelper.swap(integers, j, j - h);
                 }
             }
+            h = h / 3;
         }
 
         Printer.print(NAME, integers);
@@ -25,8 +33,5 @@ public final class Selection implements Algorithm {
     @Override
     public String name() {
         return NAME;
-    }
-
-    private Selection() {
     }
 }

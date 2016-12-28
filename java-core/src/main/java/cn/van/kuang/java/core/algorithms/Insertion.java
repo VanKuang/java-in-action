@@ -1,5 +1,9 @@
 package cn.van.kuang.java.core.algorithms;
 
+import cn.van.kuang.java.core.algorithms.utils.ArrayHelper;
+import cn.van.kuang.java.core.algorithms.utils.Checker;
+import cn.van.kuang.java.core.algorithms.utils.Printer;
+
 public final class Insertion implements Algorithm {
 
     private static final String NAME = "Insertion";
@@ -42,7 +46,17 @@ public final class Insertion implements Algorithm {
             integers[j + 1] = tmp;
         }
 
-        Printer.print(NAME, integers);
+        Printer.print(NAME + "-1", integers);
+    }
+
+    public static void sort2(int[] integers) {
+        for (int i = 1, length = integers.length; i < length; i++) {
+            for (int j = i; j > 0 && integers[j] < integers[j - 1]; j--) {
+                ArrayHelper.swap(integers, j, j - 1);
+            }
+        }
+
+        Printer.print(NAME + "-2", integers);
     }
 
     @Override
