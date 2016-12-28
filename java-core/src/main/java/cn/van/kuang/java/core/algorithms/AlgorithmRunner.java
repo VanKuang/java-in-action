@@ -18,6 +18,7 @@ public class AlgorithmRunner {
         Insertion.sort2(createArray());
         Shell.sort(createArray());
         Merge.sort(createArray());
+        Merge.sort1(createArray());
 
         runWithBigArray();
     }

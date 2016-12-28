@@ -8,6 +8,11 @@ public final class Selection implements Algorithm {
 
     private static final String NAME = "Selection";
 
+    @Override
+    public String name() {
+        return NAME;
+    }
+
     public static void sort(int[] integers) {
         Checker.isNotNull(integers);
 
@@ -20,11 +25,6 @@ public final class Selection implements Algorithm {
         }
 
         Printer.print(NAME, integers);
-    }
-
-    @Override
-    public String name() {
-        return NAME;
     }
 
     private Selection() {

@@ -8,6 +8,11 @@ public final class Insertion implements Algorithm {
 
     private static final String NAME = "Insertion";
 
+    @Override
+    public String name() {
+        return NAME;
+    }
+
     public static void sort(int[] integers) {
         Checker.isNotNull(integers);
 
@@ -57,11 +62,6 @@ public final class Insertion implements Algorithm {
         }
 
         Printer.print(NAME + "-2", integers);
-    }
-
-    @Override
-    public String name() {
-        return NAME;
     }
 
     private Insertion() {

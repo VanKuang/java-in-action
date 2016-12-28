@@ -8,6 +8,11 @@ public final class Shell implements Algorithm {
 
     private static final String NAME = "Shell";
 
+    @Override
+    public String name() {
+        return NAME;
+    }
+
     public static void sort(int[] integers) {
         Checker.isNotNull(integers);
 
@@ -30,8 +35,6 @@ public final class Shell implements Algorithm {
         Printer.print(NAME, integers);
     }
 
-    @Override
-    public String name() {
-        return NAME;
+    private Shell() {
     }
 }
