@@ -2,7 +2,6 @@ package cn.van.kuang.java.core.algorithms;
 
 import cn.van.kuang.java.core.algorithms.utils.MillsWatcher;
 import cn.van.kuang.java.core.algorithms.utils.NanoWatcher;
-import cn.van.kuang.java.core.algorithms.utils.Quick3;
 import cn.van.kuang.java.core.algorithms.utils.Watcher;
 
 import java.util.Arrays;

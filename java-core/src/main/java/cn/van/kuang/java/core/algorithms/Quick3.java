@@ -1,6 +1,8 @@
-package cn.van.kuang.java.core.algorithms.utils;
+package cn.van.kuang.java.core.algorithms;
 
-import cn.van.kuang.java.core.algorithms.Algorithm;
+import cn.van.kuang.java.core.algorithms.utils.ArrayHelper;
+import cn.van.kuang.java.core.algorithms.utils.Checker;
+import cn.van.kuang.java.core.algorithms.utils.Printer;
 
 public class Quick3 implements Algorithm {
 
