@@ -16,10 +16,10 @@ public final class Insertion implements Algorithm {
     public static void sort(int[] integers) {
         Checker.isNotNull(integers);
 
-        int i, j, target;
-        int length = integers.length;
+        int j;
+        int target;
 
-        for (i = 1; i < length; i++) {
+        for (int i = 1, length = integers.length; i < length; i++) {
             j = i;
             target = integers[j];
 

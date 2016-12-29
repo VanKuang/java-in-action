@@ -2,6 +2,7 @@ package cn.van.kuang.java.core.algorithms;
 
 import cn.van.kuang.java.core.algorithms.utils.MillsWatcher;
 import cn.van.kuang.java.core.algorithms.utils.NanoWatcher;
+import cn.van.kuang.java.core.algorithms.utils.Quick3;
 import cn.van.kuang.java.core.algorithms.utils.Watcher;
 
 import java.util.Arrays;
@@ -19,6 +20,8 @@ public class AlgorithmRunner {
         Shell.sort(createArray());
         Merge.sort(createArray());
         Merge.sort1(createArray());
+        Quick.sort(createArray());
+        Quick3.sort(createArray());
 
         runWithBigArray();
     }
@@ -45,7 +48,7 @@ public class AlgorithmRunner {
     }
 
     private static int[] createArray() {
-        return new int[]{1, 3, 2, 5, 10, 9, 4, 7, 8, 6};
+        return new int[]{5, 3, 2, 1, 10, 9, 4, 7, 8, 6};
     }
 
     private static int[] createBigArray() {
