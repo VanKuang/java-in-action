@@ -10,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/netty-in-action/netty-in-action.iml" filepath="$PROJECT_DIR$/netty-in-action/netty-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava-in-action/rxjava-in-action.iml" filepath="$PROJECT_DIR$/rxjava-in-action/rxjava-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-in-action/spring-boot-in-action.iml" filepath="$PROJECT_DIR$/spring-boot-in-action/spring-boot-in-action.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-in-action/spring-in-action.iml" filepath="$PROJECT_DIR$/spring-in-action/spring-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/zookeeper-in-action/zookeeper-in-action.iml" filepath="$PROJECT_DIR$/zookeeper-in-action/zookeeper-in-action.iml" />
     </modules>
   </component>
