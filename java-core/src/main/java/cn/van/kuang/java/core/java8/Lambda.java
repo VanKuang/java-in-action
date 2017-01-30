@@ -2,6 +2,7 @@ package cn.van.kuang.java.core.java8;
 
 import java.time.Clock;
 import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -47,7 +48,7 @@ public class Lambda {
 
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("D", "C", "B", "A");
-        Collections.sort(strings, String::compareTo);
+        strings.sort(String::compareTo);
         strings.forEach(System.out::println);
 
         printDelimeter();
@@ -116,6 +117,16 @@ public class Lambda {
         Clock clock = Clock.systemDefaultZone();
         System.out.println(clock.getZone());
         System.out.println(Date.from(clock.instant()));
+
+        printDelimeter();
+
+        Runnable runnable = () -> System.out.println(Thread.currentThread().getName());
+        new Thread(runnable).start();
+
+        printDelimeter();
+
+        BinaryOperator<Integer> add = (x, y) -> x + y;
+        System.out.println(add.apply(1, 2));
     }
 
     private static void printDelimeter() {
