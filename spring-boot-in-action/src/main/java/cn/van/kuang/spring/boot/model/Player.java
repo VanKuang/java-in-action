@@ -2,6 +2,8 @@ package cn.van.kuang.spring.boot.model;
 
 public class Player {
 
+    public final static Player NULL = new Player(new PlayerBuilder(0).name("").height(0.0d).position("").club(""));
+
     private final int id;
     private final String name;
     private final double height;

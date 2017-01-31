@@ -13,8 +13,9 @@ public class PlayerRepository {
     private List<Player> players = new ArrayList<>();
 
     public PlayerRepository() {
-        players.add(new Player(new PlayerBuilder(1).name("Kobe").height(6.9d).position("PG").club("Lakers")));
-        players.add(new Player(new PlayerBuilder(2).name("James").height(7.0d).position("SF").club("Cavaliers")));
+        players.add(new Player(new PlayerBuilder(1).name("Kobe Bryant").height(6.9d).position("PG").club("Lakers")));
+        players.add(new Player(new PlayerBuilder(2).name("LeBron James").height(7.0d).position("SF").club("Cavaliers")));
+        players.add(new Player(new PlayerBuilder(3).name("Stephen Curry").height(6.3d).position("PG").club("Warriors")));
     }
 
     public Player getPlayerById(int id) {
@@ -24,7 +25,7 @@ public class PlayerRepository {
             }
         }
 
-        return null;
+        return Player.NULL;
     }
 
     public List<Player> list() {
