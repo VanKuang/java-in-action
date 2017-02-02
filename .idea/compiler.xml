@@ -11,6 +11,7 @@
         <module name="jersey-jetty-in-action" />
         <module name="mybatis-in-action" />
         <module name="netty-in-action" />
+        <module name="redis-in-action" />
         <module name="rxjava-in-action" />
         <module name="spring-boot-in-action" />
         <module name="zookeeper-in-action" />
@@ -23,6 +24,7 @@
       <module name="jersey-jetty-in-action" target="1.8" />
       <module name="mybatis-in-action" target="1.8" />
       <module name="netty-in-action" target="1.8" />
+      <module name="redis-in-action" target="1.8" />
       <module name="rxjava-in-action" target="1.8" />
       <module name="spring-boot-in-action" target="1.8" />
       <module name="spring-in-action" target="1.8" />
