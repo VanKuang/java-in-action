@@ -1,9 +1,9 @@
-start redis server command:
-redis-server [config.file]
+start redis server command:  
+redis-server [config.file]  
 
-start redis client commnad:
+start redis client command:  
 redis-cli -c -p [port]
 
-start redis cluster command:
-under utils/create-cluster
+start redis cluster command:  
+under path utils/create-cluster   
 create-cluster [start|create|stop]
