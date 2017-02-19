@@ -12,6 +12,7 @@ public class Application {
         String key1 = "KEY_1";
         String key2 = "KEY_2";
         String LIST_KEY = "LIST_KEY";
+        String HYPER_LOG_LOG_KEY = "HYPER_LOG_LOG_KEY";
 
         String reply = client.set(key1, "KOBE");
 
@@ -49,6 +50,12 @@ public class Application {
         client.set(key2, "JAMES");
 
         System.out.println("MGET: " + client.mget(key1, key2));
+
+        client.pfadd(HYPER_LOG_LOG_KEY, "SC", "KT");
+
+        System.out.println("PFCount of HYPER_LOG_LOG_KEY: " + client.pfcount(HYPER_LOG_LOG_KEY));
+
+        client.close();
     }
 
 }
