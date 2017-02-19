@@ -9,7 +9,7 @@ public final class ID {
     private static long SEED = System.currentTimeMillis();
 
     public static long generate() {
-        long temp = 0;
+        long temp;
         try {
             lock.lock();
             temp = SEED++;

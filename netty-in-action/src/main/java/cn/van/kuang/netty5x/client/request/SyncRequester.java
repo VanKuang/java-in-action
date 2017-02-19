@@ -1,7 +1,5 @@
-package cn.van.kuang.netty5x.client.request.sync;
+package cn.van.kuang.netty5x.client.request;
 
-import cn.van.kuang.netty5x.client.request.Requester;
-import cn.van.kuang.netty5x.client.request.ResponseObserver;
 import cn.van.kuang.netty5x.model.Request;
 import cn.van.kuang.netty5x.model.Response;
 import cn.van.kuang.netty5x.model.TraceableRequest;

@@ -1,8 +1,8 @@
 package cn.van.kuang.netty5x.client;
 
 import cn.van.kuang.common.Heartbeat;
-import cn.van.kuang.netty5x.client.request.async.AsyncRequester;
-import cn.van.kuang.netty5x.client.request.sync.SyncRequester;
+import cn.van.kuang.netty5x.client.request.AsyncRequester;
+import cn.van.kuang.netty5x.client.request.SyncRequester;
 import cn.van.kuang.netty5x.model.DefaultRequest;
 import cn.van.kuang.netty5x.model.Response;
 import cn.van.kuang.netty5x.model.TraceableRequest;
@@ -85,12 +85,10 @@ public class NettyClient {
                     });
 
             final ChannelFuture channelFuture = bootstrap.connect(serverAddress, port)
-                    .addListener(new ChannelFutureListener() {
-                        public void operationComplete(ChannelFuture future) throws Exception {
-                            if (!future.isSuccess()) {
-                                if (retryTimes > 0) {
-                                    reconnect();
-                                }
+                    .addListener((ChannelFutureListener) future -> {
+                        if (!future.isSuccess()) {
+                            if (retryTimes > 0) {
+                                reconnect();
                             }
                         }
                     }).sync();
@@ -123,56 +121,50 @@ public class NettyClient {
 
         logger.info("Try to reconnect in {}ms later, times: {}", DEFAULT_RECONNECT_INTERVAL, retryTimes + 1);
 
-        reconnectService.schedule((Runnable) () -> {
+        reconnectService.schedule(() -> {
             retryTimes++;
             start();
         }, retryIntervalInMilSec, TimeUnit.MILLISECONDS);
     }
 
     private void trySyncCall() {
-        new Thread() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    try {
-                        DefaultRequest request = new DefaultRequest();
-                        TraceableRequest traceableRequest = new TraceableRequest(request);
-                        Response<String> response = syncRequester.request(traceableRequest);
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                try {
+                    DefaultRequest request = new DefaultRequest();
+                    TraceableRequest traceableRequest = new TraceableRequest(request);
+                    Response<String> response = syncRequester.request(traceableRequest);
 
-                        logger.info("Got response synchronous: {}, by {}", response, traceableRequest);
-                    } catch (Exception e) {
-                        logger.error("Fail to get response synchronous", e);
-                    }
+                    logger.info("Got response synchronous: {}, by {}", response, traceableRequest);
+                } catch (Exception e) {
+                    logger.error("Fail to get response synchronous", e);
                 }
             }
-        }.start();
+        }).start();
     }
 
     private void tryAsyncCall() {
-        new Thread() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    try {
-                        DefaultRequest request = new DefaultRequest();
-                        TraceableRequest traceableRequest = new TraceableRequest(request);
-
-                        AsyncRequester asyncRequester = new AsyncRequester(syncRequester);
-                        Future<Response<Object>> responseFuture = asyncRequester.requestAsync(traceableRequest);
-                        Response<Object> asyncResponse = responseFuture.get();
-
-                        logger.info("Got response asynchronous: {}, by {}", asyncResponse, request);
-                    } catch (Exception e) {
-                        logger.error("Fail to get response synchronous", e);
-                    }
-                }
-
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
                 try {
-                    Thread.sleep(5 * 1000L);
-                } catch (InterruptedException ignore) {
+                    DefaultRequest request = new DefaultRequest();
+                    TraceableRequest traceableRequest = new TraceableRequest(request);
+
+                    AsyncRequester asyncRequester = new AsyncRequester(syncRequester);
+                    Future<Response<Object>> responseFuture = asyncRequester.requestAsync(traceableRequest);
+                    Response<Object> asyncResponse = responseFuture.get();
+
+                    logger.info("Got response asynchronous: {}, by {}", asyncResponse, request);
+                } catch (Exception e) {
+                    logger.error("Fail to get response synchronous", e);
                 }
             }
-        }.start();
+
+            try {
+                Thread.sleep(5 * 1000L);
+            } catch (InterruptedException ignore) {
+            }
+        }).start();
     }
 
     class ClientHandler extends ChannelHandlerAdapter {
@@ -181,7 +173,9 @@ public class NettyClient {
         public void channelActive(ChannelHandlerContext ctx) throws Exception {
             logger.info("Channel active, {}", ctx.channel().remoteAddress());
 
-            Subscription subscription = Subscription.Builder.get()
+            Subscription subscription = Subscription
+                    .Builder
+                    .get()
                     .withName("SubscribeTopicALL")
                     .withTopic(new TopicImpl(Topic.Type.ALL))
                     .build();

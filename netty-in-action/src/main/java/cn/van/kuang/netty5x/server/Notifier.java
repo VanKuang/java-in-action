@@ -21,13 +21,13 @@ public class Notifier {
         final Notification<String> notificationA = Notification.Builder.<String>get()
                 .withName("TopicANotification")
                 .withTopic(new TopicImpl(Topic.Type.A))
-                .withContent("Message~~~")
+                .withContent("Message from topic A~~~")
                 .build();
 
         final Notification<String> notificationB = Notification.Builder.<String>get()
                 .withName("TopicBNotification")
                 .withTopic(new TopicImpl(Topic.Type.B))
-                .withContent("Message~~~")
+                .withContent("Message from topic B~~~")
                 .build();
 
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(

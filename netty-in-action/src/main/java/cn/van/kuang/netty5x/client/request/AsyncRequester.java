@@ -1,10 +1,8 @@
-package cn.van.kuang.netty5x.client.request.async;
+package cn.van.kuang.netty5x.client.request;
 
-import cn.van.kuang.netty5x.client.request.Requester;
 import cn.van.kuang.netty5x.model.Request;
 import cn.van.kuang.netty5x.model.Response;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -20,6 +18,6 @@ public class AsyncRequester {
     }
 
     public <T> Future<Response<T>> requestAsync(final Request request) throws Exception {
-        return executorService.submit((Callable<Response<T>>) () -> requester.request(request));
+        return executorService.submit(() -> requester.request(request));
     }
 }

@@ -68,22 +68,19 @@ public class OioNettyClient {
     }
 
     private void doTryRequest(final Channel context) {
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    try {
-                        DefaultRequest request = new DefaultRequest();
-                        TraceableRequest traceableRequest = new TraceableRequest(request);
-                        context.writeAndFlush(traceableRequest);
+        Thread t = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                try {
+                    DefaultRequest request = new DefaultRequest();
+                    TraceableRequest traceableRequest = new TraceableRequest(request);
+                    context.writeAndFlush(traceableRequest);
 
-                        logger.info("Got response synchronous: {}, by {}", getResponse(), traceableRequest);
-                    } catch (Exception e) {
-                        logger.error("Fail to get response synchronous", e);
-                    }
+                    logger.info("Got response synchronous: {}, by {}", getResponse(), traceableRequest);
+                } catch (Exception e) {
+                    logger.error("Fail to get response synchronous", e);
                 }
             }
-        };
+        });
         t.setName("Blocking-Call-Thread");
         t.start();
     }

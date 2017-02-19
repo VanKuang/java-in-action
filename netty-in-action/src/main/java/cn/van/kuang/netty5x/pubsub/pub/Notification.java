@@ -15,13 +15,13 @@ public interface Notification<T> extends Serializable {
     class Builder<T> {
 
         public static <T> Builder<T> get() {
-            return new Builder<T>();
+            return new Builder<>();
         }
 
         private NotificationImpl<T> notification;
 
         public Builder() {
-            this.notification = new NotificationImpl<T>();
+            this.notification = new NotificationImpl<>();
         }
 
         public Builder<T> withName(String name) {

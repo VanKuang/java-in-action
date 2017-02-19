@@ -23,7 +23,7 @@ public class JerseyClient {
     private final String ADDRESS = Constants.HOST + ":" + Constants.PORT;
     private final WebTarget target = ClientBuilder.newClient().target(ADDRESS);
 
-    public void requestHTML() {
+    private void requestHTML() {
         String html = target.path(Constants.PATH_QUERY)
                 .path("html")
                 .request(MediaType.TEXT_HTML_TYPE)
@@ -32,7 +32,7 @@ public class JerseyClient {
         logger.info(html);
     }
 
-    public void requestBigObject() {
+    private void requestBigObject() {
         ClientConfig clientConfig = new ClientConfig();
         clientConfig.register(new ClientReaderInterceptor());
 
@@ -46,7 +46,7 @@ public class JerseyClient {
         logger.info("{}", bigObject);
     }
 
-    public void requestCompressedString() {
+    private void requestCompressedString() {
         ClientConfig clientConfig = new ClientConfig();
         clientConfig.register(new ClientReaderInterceptor());
 
@@ -60,7 +60,7 @@ public class JerseyClient {
         logger.info(compression);
     }
 
-    public void requestDynamicBindng() {
+    private void requestDynamicBindng() {
         ClientConfig clientConfig = new ClientConfig();
         clientConfig.register(new ClientReaderInterceptor());
 
@@ -74,7 +74,7 @@ public class JerseyClient {
         logger.info(value);
     }
 
-    public void requestAsyncResult() throws Exception {
+    private void requestAsyncResult() throws Exception {
         logger.info("Start Asyn request");
         String result = target.path(Constants.PATH_ASYNC)
                 .path("query")
@@ -102,7 +102,7 @@ public class JerseyClient {
                 });
     }
 
-    public void readChunk() {
+    private void readChunk() {
         Response response = target.path(Constants.PATH_EVENTS)
                 .path("chunk")
                 .request()
@@ -117,21 +117,21 @@ public class JerseyClient {
         }
     }
 
-    public void post() {
+    private void post() {
         target.path(Constants.PATH_UPDATE)
                 .path("resources")
                 .request()
                 .post(Entity.text("POST_ID_123"));
     }
 
-    public void put() {
+    private void put() {
         target.path(Constants.PATH_UPDATE)
                 .path("resources")
                 .request()
                 .put(Entity.text("PUT_ID_123"));
     }
 
-    public void delete() {
+    private void delete() {
         target.path(Constants.PATH_UPDATE)
                 .path("resources")
                 .path("DELETE_ID_123,DELETE_ID_456,DELETE_ID_789")
@@ -139,7 +139,7 @@ public class JerseyClient {
                 .delete();
     }
 
-    public void subscribe() {
+    private void subscribe() {
         logger.info("Subscribe synchronous");
 
         Client client = ClientBuilder.newBuilder().register(SseFeature.class).build();
@@ -159,24 +159,18 @@ public class JerseyClient {
         }
     }
 
-    public synchronized void subscribeAsynchronous() {
+    private synchronized void subscribeAsynchronous() {
         logger.info("Susbscribe asynchronous");
 
         Client client = ClientBuilder.newBuilder().register(SseFeature.class).build();
-        WebTarget target = client.target(ADDRESS)
+        WebTarget target = client
+                .target(ADDRESS)
                 .path(Constants.PATH_BROADCAST)
                 .path("subscription");
 
-        new EventSource(target) {
-            @Override
-            public void onEvent(InboundEvent inboundEvent) {
-                logger.info("Received event by asynchronous: " + inboundEvent.readData(String.class));
-            }
-        };
-
-        while (true) {
-
-        }
+        EventSource source = EventSource.target(target).named("asyncSubscriber").open();
+        source.register(
+                inboundEvent -> logger.info("Received event by asynchronous: " + inboundEvent.readData(String.class)));
     }
 
     public static void main(String[] args) throws Exception {
@@ -196,5 +190,11 @@ public class JerseyClient {
 
         jerseyClient.subscribe();
         jerseyClient.subscribeAsynchronous();
+
+        while (Thread.currentThread().isAlive()) {
+            if (Thread.currentThread().isInterrupted()) {
+                break;
+            }
+        }
     }
 }

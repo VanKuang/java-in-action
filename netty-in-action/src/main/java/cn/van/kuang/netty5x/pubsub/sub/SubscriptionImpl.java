@@ -8,7 +8,7 @@ import java.util.List;
 class SubscriptionImpl implements Subscription {
 
     private String name;
-    private List<Topic> topics = new ArrayList<Topic>();
+    private List<Topic> topics = new ArrayList<>();
 
     public String getName() {
         return name;
