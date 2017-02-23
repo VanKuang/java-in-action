@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/java-core/java-core.iml" filepath="$PROJECT_DIR$/java-core/java-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-in-action.iml" filepath="$PROJECT_DIR$/.idea/java-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/jersey-jetty-in-action/jersey-jetty-in-action.iml" filepath="$PROJECT_DIR$/jersey-jetty-in-action/jersey-jetty-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-in-action/kafka-in-action.iml" filepath="$PROJECT_DIR$/kafka-in-action/kafka-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-in-action/mybatis-in-action.iml" filepath="$PROJECT_DIR$/mybatis-in-action/mybatis-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-in-action/netty-in-action.iml" filepath="$PROJECT_DIR$/netty-in-action/netty-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-in-action/redis-in-action.iml" filepath="$PROJECT_DIR$/redis-in-action/redis-in-action.iml" />

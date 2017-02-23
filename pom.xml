@@ -19,6 +19,7 @@
         <module>spring-boot-in-action</module>
         <module>rxjava-in-action</module>
         <module>redis-in-action</module>
+        <module>kafka-in-action</module>
     </modules>
 
     <dependencies>
