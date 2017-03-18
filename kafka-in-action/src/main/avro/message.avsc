@@ -1,0 +1,10 @@
+{
+    "namespace": "cn.van.kuang.kafka.avro",
+    "type": "record",
+    "name": "Message",
+    "fields": [
+        {"name": "id", "type": "int"},
+        {"name": "timestamp", "type": "long"},
+        {"name": "content", "type": "string"}
+    ]
+}
