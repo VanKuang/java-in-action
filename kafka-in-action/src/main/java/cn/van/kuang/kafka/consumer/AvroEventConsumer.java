@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import static cn.van.kuang.kafka.utils.PropertiesFactory.createAvroConsumerProperties;
+
 public class AvroEventConsumer {
 
     private final static Logger logger = LoggerFactory.getLogger(AvroEventConsumer.class);
@@ -22,7 +24,7 @@ public class AvroEventConsumer {
     private Map<TopicPartition, OffsetAndMetadata> currentOffsets = new HashMap<>();
 
     public AvroEventConsumer() {
-        this.consumer = new KafkaConsumer<>(Utils.createAvroConsumerProperties());
+        this.consumer = new KafkaConsumer<>(createAvroConsumerProperties());
     }
 
     public void start() {

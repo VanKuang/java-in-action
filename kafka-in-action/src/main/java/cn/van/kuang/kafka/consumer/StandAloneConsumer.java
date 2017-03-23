@@ -1,7 +1,6 @@
 package cn.van.kuang.kafka.consumer;
 
 import cn.van.kuang.kafka.utils.Constants;
-import cn.van.kuang.kafka.utils.Utils;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -17,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static cn.van.kuang.kafka.utils.PropertiesFactory.createStringConsumerProperties;
+
 public class StandAloneConsumer {
 
     private final static Logger logger = LoggerFactory.getLogger(StandAloneConsumer.class);
@@ -25,7 +26,7 @@ public class StandAloneConsumer {
     private Map<TopicPartition, OffsetAndMetadata> currentOffsets = new HashMap<>();
 
     public StandAloneConsumer() {
-        this.consumer = new KafkaConsumer<>(Utils.createStringConsumerProperties());
+        this.consumer = new KafkaConsumer<>(createStringConsumerProperties());
     }
 
     public void start() {

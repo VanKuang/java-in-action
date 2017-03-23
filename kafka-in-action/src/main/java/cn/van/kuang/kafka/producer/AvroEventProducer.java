@@ -8,6 +8,8 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static cn.van.kuang.kafka.utils.PropertiesFactory.createAvroProducerProperties;
+
 public class AvroEventProducer {
 
     private final static Logger logger = LoggerFactory.getLogger(AvroEventProducer.class);
@@ -15,7 +17,7 @@ public class AvroEventProducer {
     private final KafkaProducer<String, byte[]> producer;
 
     public AvroEventProducer() {
-        this.producer = new KafkaProducer<>(Utils.createAvroProducerProperties());
+        this.producer = new KafkaProducer<>(createAvroProducerProperties());
     }
 
     public void close() {

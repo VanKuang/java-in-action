@@ -1,16 +1,17 @@
 package cn.van.kuang.kafka.producer;
 
 import cn.van.kuang.kafka.utils.Constants;
-import cn.van.kuang.kafka.utils.Utils;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
+import static cn.van.kuang.kafka.utils.PropertiesFactory.createStringProducerProperties;
+
 public class StringProducer {
 
     public void publish(String msg) {
-        Properties properties = Utils.createStringProducerProperties();
+        Properties properties = createStringProducerProperties();
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
