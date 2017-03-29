@@ -15,8 +15,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.compression.JdkZlibDecoder;
-import io.netty.handler.codec.compression.JdkZlibEncoder;
+import io.netty.handler.codec.compression.ZlibCodecFactory;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
@@ -32,6 +31,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.zip.Deflater;
 
 public class NettyClient {
 
@@ -74,10 +74,10 @@ public class NettyClient {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline()
+                                    .addLast(ZlibCodecFactory.newZlibDecoder())
+                                    .addLast(ZlibCodecFactory.newZlibEncoder(Deflater.BEST_COMPRESSION))
                                     .addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)))
                                     .addLast(new ObjectEncoder())
-                                    .addLast(new JdkZlibDecoder())
-                                    .addLast(new JdkZlibEncoder())
                                     .addLast(new IdleStateHandler(0, 0, 10))
                                     .addLast(new DefaultEventExecutorGroup(10), syncRequester)
                                     .addLast(new ClientHandler());

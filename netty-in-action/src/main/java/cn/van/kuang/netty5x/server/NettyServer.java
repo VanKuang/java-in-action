@@ -10,14 +10,15 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.compression.JdkZlibDecoder;
-import io.netty.handler.codec.compression.JdkZlibEncoder;
+import io.netty.handler.codec.compression.ZlibCodecFactory;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 import io.netty.util.concurrent.DefaultEventExecutorGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.zip.Deflater;
 
 public class NettyServer {
 
@@ -41,10 +42,10 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline()
+                                    .addLast(ZlibCodecFactory.newZlibDecoder())
+                                    .addLast(ZlibCodecFactory.newZlibEncoder(Deflater.BEST_COMPRESSION))
                                     .addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)))
                                     .addLast(new ObjectEncoder())
-                                    .addLast(new JdkZlibDecoder())
-                                    .addLast(new JdkZlibEncoder())
                                     .addLast(new ConnectionHandler())
                                     .addLast(new DefaultEventExecutorGroup(10), new MessageHandler());
                         }
