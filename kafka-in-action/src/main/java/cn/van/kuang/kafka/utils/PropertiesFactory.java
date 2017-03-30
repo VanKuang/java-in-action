@@ -43,7 +43,7 @@ public final class PropertiesFactory {
     private static Properties createProducerCommonProperties() {
         Properties props = new Properties();
 
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092,localhost:9093,localhost:9094");
         props.put(ACKS_CONFIG, "all");
         props.put(RETRIES_CONFIG, 0);
         props.put(ProducerConfig.SEND_BUFFER_CONFIG, 16384);
@@ -55,7 +55,7 @@ public final class PropertiesFactory {
     private static Properties createConsumerCommonProperties() {
         Properties props = new Properties();
 
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092,localhost:9093,localhost:9094");
         props.put(GROUP_ID_CONFIG, "test");
         props.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
         props.put(SESSION_TIMEOUT_MS_CONFIG, "30000");

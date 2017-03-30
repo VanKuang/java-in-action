@@ -13,7 +13,7 @@ public class KafkaBrokerBootstrap {
         logger.info("===================Starting Kafka Broker==========================");
 
         try {
-            Kafka.main(new String[]{Utils.getResourcePath() + "server.properties"});
+            Kafka.main(new String[]{Utils.getResourcePath() + args[0]});
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
