@@ -48,6 +48,8 @@ public class NettyClient {
     private final SyncRequester syncRequester = new SyncRequester();
     private final ScheduledExecutorService reconnectService = Executors.newSingleThreadScheduledExecutor();
 
+    private static final DefaultEventExecutorGroup EVENT_EXECUTOR_GROUP = new DefaultEventExecutorGroup(10);
+
     private int retryTimes = 0;
 
     public NettyClient(String serverAddress, int port) {
@@ -79,7 +81,7 @@ public class NettyClient {
                                     .addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)))
                                     .addLast(new ObjectEncoder())
                                     .addLast(new IdleStateHandler(0, 0, 10))
-                                    .addLast(new DefaultEventExecutorGroup(10), syncRequester)
+                                    .addLast(EVENT_EXECUTOR_GROUP, syncRequester)
                                     .addLast(new ClientHandler());
                         }
                     });
@@ -109,6 +111,7 @@ public class NettyClient {
                 System.exit(-1);
             }
         } finally {
+            EVENT_EXECUTOR_GROUP.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
     }

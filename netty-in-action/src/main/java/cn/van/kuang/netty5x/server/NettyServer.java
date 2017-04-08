@@ -26,6 +26,8 @@ public class NettyServer {
 
     private final int port;
 
+    private static final DefaultEventExecutorGroup EVENT_EXECUTOR_GROUP = new DefaultEventExecutorGroup(10);
+
     public NettyServer(int port) {
         this.port = port;
     }
@@ -47,7 +49,7 @@ public class NettyServer {
                                     .addLast(new ObjectDecoder(ClassResolvers.cacheDisabled(null)))
                                     .addLast(new ObjectEncoder())
                                     .addLast(new ConnectionHandler())
-                                    .addLast(new DefaultEventExecutorGroup(10), new MessageHandler());
+                                    .addLast(EVENT_EXECUTOR_GROUP, new MessageHandler());
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG, 100)
@@ -65,6 +67,7 @@ public class NettyServer {
 
             System.exit(-1);
         } finally {
+            EVENT_EXECUTOR_GROUP.shutdownGracefully();
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
