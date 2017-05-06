@@ -12,6 +12,7 @@
         <module name="kafka-in-action" />
         <module name="mybatis-in-action" />
         <module name="netty-in-action" />
+        <module name="open-tracing-in-action" />
         <module name="redis-in-action" />
         <module name="rxjava-in-action" />
         <module name="spring-boot-in-action" />
@@ -26,6 +27,7 @@
       <module name="kafka-in-action" target="1.8" />
       <module name="mybatis-in-action" target="1.8" />
       <module name="netty-in-action" target="1.8" />
+      <module name="open-tracing-in-action" target="1.8" />
       <module name="redis-in-action" target="1.8" />
       <module name="rxjava-in-action" target="1.8" />
       <module name="spring-boot-in-action" target="1.8" />

@@ -20,6 +20,7 @@
         <module>rxjava-in-action</module>
         <module>redis-in-action</module>
         <module>kafka-in-action</module>
+        <module>open-tracing-in-action</module>
     </modules>
 
     <dependencies>
