@@ -1,11 +1,14 @@
 package cn.van.kuang.java.core.java8;
 
+import com.google.common.collect.Lists;
+
 import java.time.Clock;
 import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Lambda {
 
@@ -127,6 +130,17 @@ public class Lambda {
 
         BinaryOperator<Integer> add = (x, y) -> x + y;
         System.out.println(add.apply(1, 2));
+
+        printDelimeter();
+
+        Map<String, List<String>> map = new HashMap<>();
+        Lists.newArrayList("A", "B", "C", "A").forEach(s -> map.computeIfAbsent(s, v -> new ArrayList<>()).add("sth"));
+        System.out.println(map);
+
+        printDelimeter();
+
+        Map<String, List<String>> map1 = Lists.newArrayList("A", "B", "C", "A").stream().collect(Collectors.groupingBy(String::new));
+        System.out.println(map1);
     }
 
     private static void printDelimeter() {
