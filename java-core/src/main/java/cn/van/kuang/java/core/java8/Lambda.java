@@ -141,6 +141,11 @@ public class Lambda {
 
         Map<String, List<String>> map1 = Lists.newArrayList("A", "B", "C", "A").stream().collect(Collectors.groupingBy(String::new));
         System.out.println(map1);
+
+        printDelimeter();
+
+        System.out.println(Clock.systemUTC().instant());
+        System.out.println(Clock.systemUTC().millis());
     }
 
     private static void printDelimeter() {
