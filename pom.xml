@@ -21,6 +21,7 @@
         <module>redis-in-action</module>
         <module>kafka-in-action</module>
         <module>open-tracing-in-action</module>
+        <module>vertx-in-action</module>
     </modules>
 
     <dependencies>

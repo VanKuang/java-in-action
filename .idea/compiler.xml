@@ -16,6 +16,7 @@
         <module name="redis-in-action" />
         <module name="rxjava-in-action" />
         <module name="spring-boot-in-action" />
+        <module name="vertx-in-action" />
         <module name="zookeeper-in-action" />
       </profile>
     </annotationProcessing>
@@ -31,7 +32,7 @@
       <module name="redis-in-action" target="1.8" />
       <module name="rxjava-in-action" target="1.8" />
       <module name="spring-boot-in-action" target="1.8" />
-      <module name="spring-in-action" target="1.8" />
+      <module name="vertx-in-action" target="1.8" />
       <module name="zookeeper-in-action" target="1.8" />
     </bytecodeTargetLevel>
   </component>
