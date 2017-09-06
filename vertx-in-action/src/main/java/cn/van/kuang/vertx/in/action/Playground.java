@@ -4,6 +4,7 @@ import io.vertx.core.Vertx;
 import io.vertx.core.WorkerExecutor;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.MessageConsumer;
+import io.vertx.core.net.NetServer;
 
 public class Playground {
 
@@ -44,6 +45,22 @@ public class Playground {
         eventBus.send("notification", "Hello", result -> {
             if (result.succeeded()) {
                 log("Delivered, response: [" + result.result().body() + "]");
+            }
+        });
+
+        NetServer server = vertx.createNetServer();
+
+        server.connectHandler(socket -> socket.handler(
+                buffer -> {
+                    log("Received some bytes, length=" + buffer.length() + ", msg: " + buffer.toString());
+                })
+        );
+
+        server.listen(10000, "localhost", result -> {
+            if (result.succeeded()) {
+                log("Listened port: [" + server.actualPort() + "]");
+            } else {
+                log("Fail to bind port");
             }
         });
     }
