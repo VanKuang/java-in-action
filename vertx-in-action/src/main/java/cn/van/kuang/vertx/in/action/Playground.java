@@ -4,7 +4,8 @@ import io.vertx.core.Vertx;
 import io.vertx.core.WorkerExecutor;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.MessageConsumer;
-import io.vertx.core.net.NetServer;
+
+import static cn.van.kuang.vertx.in.action.Printer.log;
 
 public class Playground {
 
@@ -48,25 +49,7 @@ public class Playground {
             }
         });
 
-        NetServer server = vertx.createNetServer();
 
-        server.connectHandler(socket -> socket.handler(
-                buffer -> {
-                    log("Received some bytes, length=" + buffer.length() + ", msg: " + buffer.toString());
-                })
-        );
-
-        server.listen(10000, "localhost", result -> {
-            if (result.succeeded()) {
-                log("Listened port: [" + server.actualPort() + "]");
-            } else {
-                log("Fail to bind port");
-            }
-        });
-    }
-
-    private static void log(String message) {
-        System.out.println("[" + Thread.currentThread().getName() + "]--" + message);
     }
 
 }
