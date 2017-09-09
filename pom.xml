@@ -22,6 +22,7 @@
         <module>kafka-in-action</module>
         <module>open-tracing-in-action</module>
         <module>vertx-in-action</module>
+        <module>guice-in-action</module>
     </modules>
 
     <dependencies>

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.boot:spring-boot-devtools:2.0.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170830.104737-923.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170908.090538-937.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170830.104737-923-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170908.090538-937-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170830.104737-923-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.0.0.BUILD-SNAPSHOT/spring-boot-devtools-2.0.0.BUILD-20170908.090538-937-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
