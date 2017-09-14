@@ -1,10 +1,8 @@
-package cn.van.kuang.vertx.in.action;
+package cn.van.kuang.vertx.in.action.playground;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.net.NetClient;
 import io.vertx.core.net.NetSocket;
-
-import static cn.van.kuang.vertx.in.action.Printer.log;
 
 public class MyNetClient {
 
@@ -15,13 +13,13 @@ public class MyNetClient {
 
         client.connect(10000, "localhost", result -> {
             if (result.succeeded()) {
-                log("Connected");
+                Printer.log("Connected");
 
                 NetSocket socket = result.result();
 
                 socket.write("Hi, this is from client");
             } else {
-                log("Fail to connect");
+                Printer.log("Fail to connect");
             }
         });
 

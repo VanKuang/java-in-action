@@ -1,10 +1,8 @@
-package cn.van.kuang.vertx.in.action;
+package cn.van.kuang.vertx.in.action.playground;
 
 import io.vertx.core.MultiMap;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
-
-import static cn.van.kuang.vertx.in.action.Printer.log;
 
 public class MyHttpServer {
 
@@ -16,14 +14,14 @@ public class MyHttpServer {
         server.requestHandler(request -> {
             MultiMap headers = request.headers();
 
-            log("Headers -> " + headers);
+            Printer.log("Headers -> " + headers);
 
-            log("URI -> " + request.uri());
+            Printer.log("URI -> " + request.uri());
 
-            log("Path -> " + request.path());
+            Printer.log("Path -> " + request.path());
 
             request.bodyHandler(buffer -> {
-                log("Received -> " + buffer.toString());
+                Printer.log("Received -> " + buffer.toString());
 
                 request.response().setChunked(true).write("hi hi").end();
             });
@@ -31,9 +29,9 @@ public class MyHttpServer {
 
         server.listen(9999, "localhost", result -> {
             if (result.succeeded()) {
-                log("Listen to port 9999");
+                Printer.log("Listen to port 9999");
             } else {
-                log("Fail to listen port 9999");
+                Printer.log("Fail to listen port 9999");
 
                 result.cause().printStackTrace();
             }

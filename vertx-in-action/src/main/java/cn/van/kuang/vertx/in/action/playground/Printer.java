@@ -1,4 +1,4 @@
-package cn.van.kuang.vertx.in.action;
+package cn.van.kuang.vertx.in.action.playground;
 
 public final class Printer {
 

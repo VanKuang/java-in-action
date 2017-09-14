@@ -1,9 +1,7 @@
-package cn.van.kuang.vertx.in.action;
+package cn.van.kuang.vertx.in.action.playground;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.net.NetServer;
-
-import static cn.van.kuang.vertx.in.action.Printer.log;
 
 public class MyNetServer {
 
@@ -14,15 +12,15 @@ public class MyNetServer {
 
         server.connectHandler(socket -> socket.handler(
                 buffer -> {
-                    log("Received some bytes, length=" + buffer.length() + ", msg: " + buffer.toString());
+                    Printer.log("Received some bytes, length=" + buffer.length() + ", msg: " + buffer.toString());
                 })
         );
 
         server.listen(10000, "localhost", result -> {
             if (result.succeeded()) {
-                log("Listened port: [" + server.actualPort() + "]");
+                Printer.log("Listened port: [" + server.actualPort() + "]");
             } else {
-                log("Fail to bind port 10000");
+                Printer.log("Fail to bind port 10000");
 
                 result.cause().printStackTrace();
             }

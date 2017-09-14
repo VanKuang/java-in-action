@@ -1,18 +1,16 @@
-package cn.van.kuang.vertx.in.action;
+package cn.van.kuang.vertx.in.action.playground;
 
 import io.vertx.core.Vertx;
 import io.vertx.core.WorkerExecutor;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.MessageConsumer;
 
-import static cn.van.kuang.vertx.in.action.Printer.log;
-
 public class Playground {
 
     public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
 
-        vertx.setTimer(1000L, id -> log("Times up"));
+        vertx.setTimer(1000L, id -> Printer.log("Times up"));
 
         WorkerExecutor executor = vertx.createSharedWorkerExecutor("my-worker-pool");
         executor.executeBlocking(future -> {
@@ -23,7 +21,7 @@ public class Playground {
             }
 
             future.complete();
-        }, result -> log("DONE!!!"));
+        }, result -> Printer.log("DONE!!!"));
 
         EventBus eventBus = vertx.eventBus();
 
@@ -31,21 +29,21 @@ public class Playground {
 
         consumer.completionHandler(result -> {
             if (result.succeeded()) {
-                log("Register consumer handler successful");
+                Printer.log("Register consumer handler successful");
             } else {
-                log("Register consumer handler fail");
+                Printer.log("Register consumer handler fail");
             }
         });
 
         consumer.handler(message -> {
-            log("Received message: [" + message.body() + "]");
+            Printer.log("Received message: [" + message.body() + "]");
 
             message.reply("ACK");
         });
 
         eventBus.send("notification", "Hello", result -> {
             if (result.succeeded()) {
-                log("Delivered, response: [" + result.result().body() + "]");
+                Printer.log("Delivered, response: [" + result.result().body() + "]");
             }
         });
 
