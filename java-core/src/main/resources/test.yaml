@@ -1,0 +1,8 @@
+key: value
+map:
+  key.1: value1
+  key.2: value2
+  key.3: value3
+array:
+  - v1
+  - v2
