@@ -18,7 +18,7 @@ public class MainVerticle extends AbstractVerticle {
             Future<String> httpServerVerticleDeployment = Future.future();
 
             vertx.deployVerticle(
-                    "cn.van.kuang.vertx.in.action.HttpServerVerticle",
+                    HttpServerVerticle.class.getName(),
                     new DeploymentOptions().setInstances(2),
                     httpServerVerticleDeployment.completer());
 

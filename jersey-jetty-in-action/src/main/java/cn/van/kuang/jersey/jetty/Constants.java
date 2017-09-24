@@ -4,7 +4,9 @@ public final class Constants {
 
     public final static String HOST = "http://localhost";
 
-    public final static int PORT = 9999;
+    public final static int PORT = 8080;
+
+    public final static int SSL_PORT = 8443;
 
     public final static String PATH_ROOT = "hello-world/jersey";
 
