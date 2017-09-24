@@ -4,6 +4,8 @@ public final class Constants {
 
     public final static String HOST = "http://localhost";
 
+    public final static String SSL_HOST = "https://localhost";
+
     public final static int PORT = 8080;
 
     public final static int SSL_PORT = 8443;
