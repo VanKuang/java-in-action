@@ -11,10 +11,12 @@ import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
 import org.glassfish.jersey.jetty.JettyHttpContainer;
+import org.glassfish.jersey.message.GZipEncoder;
 import org.glassfish.jersey.process.JerseyProcessingUncaughtExceptionHandler;
 import org.glassfish.jersey.server.ContainerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
+import org.glassfish.jersey.server.filter.EncodingFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,6 +58,8 @@ public class JerseyServer {
         resourceConfig.register(new ServerWriterInterceptor());
         resourceConfig.register(new CompressInterceptor());
         resourceConfig.register(new DynamicBinding());
+
+        EncodingFilter.enableFor(resourceConfig, GZipEncoder.class);
 
         return createJettyServer(resourceConfig);
     }
