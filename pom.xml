@@ -23,6 +23,7 @@
         <module>open-tracing-in-action</module>
         <module>vertx-in-action</module>
         <module>guice-in-action</module>
+        <module>jgroups-in-action</module>
     </modules>
 
     <dependencies>

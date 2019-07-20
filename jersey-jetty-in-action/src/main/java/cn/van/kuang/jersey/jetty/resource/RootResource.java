@@ -19,9 +19,9 @@ public class RootResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String showRootInof(@Context HttpHeaders headers) {
-        logger.info("Visited root, client info: User-Agent=[{}], Accpet=[{}]",
+        logger.info("Visited root, client info: User-Agent=[{}], Accept=[{}]",
                 headers.getHeaderString("User-Agent"),
-                headers.getHeaderString("Accpet"));
+                headers.getHeaderString("Accept"));
 
         return "Welcome Jersey hello world";
     }

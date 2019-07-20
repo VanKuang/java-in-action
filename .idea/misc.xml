@@ -12,6 +12,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/cucumber-in-action/pom.xml" />
         <option value="$PROJECT_DIR$/spring-in-action/pom.xml" />
       </set>
     </option>
