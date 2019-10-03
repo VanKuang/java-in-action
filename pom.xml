@@ -24,6 +24,7 @@
         <module>vertx-in-action</module>
         <module>guice-in-action</module>
         <module>jgroups-in-action</module>
+        <module>rx</module>
     </modules>
 
     <dependencies>
