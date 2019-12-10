@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.van.kuang.mybatis.PlayerMapper">
+
+    <resultMap id="playerResultMap" type="Player">
+        <id property="id" column="id" javaType="int" jdbcType="NUMERIC"/>
+        <result property="name" column="name" javaType="string" jdbcType="VARCHAR"/>
+        <result property="position" column="position" javaType="string" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <update id="createTable">
+        CREATE TABLE PLAYER (
+            ID INT(10) NOT NULL AUTO_INCREMENT,
+            NAME VARCHAR2(100) NOT NULL,
+        POSITION VARCHAR2(20) NULL,
+            CREATE_TIME TIMESTAMP NOT NULL
+        )
+    </update>
+
+    <insert id="create" parameterType="Player" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO PLAYER (name, position, create_time)
+        VALUES (#{name, jdbcType=VARCHAR}, #{position, jdbcType=VARCHAR}, #{createTime, jdbcType=TIMESTAMP})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM PLAYER WHERE id=#{id}
+    </delete>
+
+    <update id="update" parameterType="Player">
+        UPDATE PLAYER SET name=#{name}, position=#{position} WHERE id=#{id}
+    </update>
+
+    <select id="queryById" parameterType="int" resultMap="playerResultMap">
+        SELECT * FROM PLAYER WHERE id=#{id}
+    </select>
+
+</mapper>

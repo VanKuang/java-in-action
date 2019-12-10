@@ -1,0 +1,17 @@
+[INFO] [2017-03-27 13:51:43,869] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Beginning cleaning of log __consumer_offsets-48.
+[INFO] [2017-03-27 13:51:43,871] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Building offset map for __consumer_offsets-48...
+[INFO] [2017-03-27 13:51:43,938] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Building offset map for log __consumer_offsets-48 for 1 segments in offset range [0, 225248).
+[INFO] [2017-03-27 13:51:44,257] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Offset map for log __consumer_offsets-48 complete.
+[INFO] [2017-03-27 13:51:44,295] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Cleaning log __consumer_offsets-48 (cleaning prior to Fri Mar 24 18:18:55 CST 2017, discarding tombstones prior to Thu Jan 01 08:00:00 CST 1970)...
+[INFO] [2017-03-27 13:51:44,299] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Cleaning segment 0 in log __consumer_offsets-48 (largest timestamp Fri Mar 24 18:18:53 CST 2017) into 0, retaining deletes.
+[INFO] [2017-03-27 13:51:44,484] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - Cleaner 0: Swapping in cleaned segment 0 for segment(s) 0 in log __consumer_offsets-48.
+[INFO] [2017-03-27 13:51:44,493] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], 
+	Log cleaner thread 0 cleaned log __consumer_offsets-48 (dirty section = [0, 225248])
+	19.5 MB of log processed in 0.6 seconds (31.5 MB/sec).
+	Indexed 19.5 MB in 0.4 seconds (50.1 Mb/sec, 62.8% of total time)
+	Buffer utilization: 0.0%
+	Cleaned 19.5 MB in 0.2 seconds (84.6 Mb/sec, 37.2% of total time)
+	Start size: 19.5 MB (225,248 messages)
+	End size: 0.0 MB (2 messages)
+	100.0% size reduction (100.0% fewer messages)
+

@@ -1,0 +1,162 @@
+[INFO] [2017-03-30 20:14:00,673] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 2
+[INFO] [2017-03-30 20:14:00,673] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/2 (is it secure? false)
+[INFO] [2017-03-30 20:14:00,676] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-03-30 20:14:00,676] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 2 at path /brokers/ids/2 with addresses: PLAINTEXT -> EndPoint(localhost,9094,PLAINTEXT)
+[INFO] [2017-03-30 20:14:00,676] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-03-30 20:14:00,676] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-03-30 20:14:00,681] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 1
+[INFO] [2017-03-30 20:14:00,962] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-21,__consumer_offsets-27,__consumer_offsets-7,__consumer_offsets-9,__consumer_offsets-25,__consumer_offsets-35,__consumer_offsets-41,__consumer_offsets-33,__consumer_offsets-23,__consumer_offsets-49,__consumer_offsets-47,__consumer_offsets-31,__consumer_offsets-3,__consumer_offsets-37,__consumer_offsets-15,__consumer_offsets-17,__consumer_offsets-19,__consumer_offsets-11,__consumer_offsets-13,__consumer_offsets-43,__consumer_offsets-39,__consumer_offsets-45,__consumer_offsets-1,__consumer_offsets-5,__consumer_offsets-29
+[INFO] [2017-03-30 20:14:00,964] [kafka-request-handler-0] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-0], Shutting down
+[INFO] [2017-03-30 20:14:00,996] [ReplicaFetcherThread-0-0] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-0], Stopped 
+[INFO] [2017-03-30 20:14:00,996] [kafka-request-handler-0] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-0], Shutdown completed
+[INFO] [2017-03-30 20:14:00,998] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,25]
+[INFO] [2017-03-30 20:14:00,999] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,25] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:00,999] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,31]
+[INFO] [2017-03-30 20:14:01,000] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,31] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,000] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,37]
+[INFO] [2017-03-30 20:14:01,016] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,37] in 16 milliseconds.
+[INFO] [2017-03-30 20:14:01,016] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,43]
+[INFO] [2017-03-30 20:14:01,017] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,43] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,017] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,5]
+[INFO] [2017-03-30 20:14:01,018] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,5] in 0 milliseconds.
+[INFO] [2017-03-30 20:14:01,019] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,49]
+[INFO] [2017-03-30 20:14:01,020] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,49] in 0 milliseconds.
+[INFO] [2017-03-30 20:14:01,020] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,11]
+[INFO] [2017-03-30 20:14:01,029] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,11] in 9 milliseconds.
+[INFO] [2017-03-30 20:14:01,029] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,17]
+[INFO] [2017-03-30 20:14:01,030] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,17] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,030] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,23]
+[INFO] [2017-03-30 20:14:01,031] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,21] on broker 2: Expanding ISR for partition [__consumer_offsets,21] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,031] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,23] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,031] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,29]
+[INFO] [2017-03-30 20:14:01,032] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,29] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,032] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,35]
+[INFO] [2017-03-30 20:14:01,037] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,27] on broker 2: Expanding ISR for partition [__consumer_offsets,27] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,037] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,35] in 5 milliseconds.
+[INFO] [2017-03-30 20:14:01,037] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,41]
+[INFO] [2017-03-30 20:14:01,038] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,41] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,038] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 2: Expanding ISR for partition [__consumer_offsets,7] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,038] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,3]
+[INFO] [2017-03-30 20:14:01,039] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,3] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,039] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,47]
+[INFO] [2017-03-30 20:14:01,040] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,47] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,040] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,9]
+[INFO] [2017-03-30 20:14:01,041] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,9] on broker 2: Expanding ISR for partition [__consumer_offsets,9] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,041] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,9] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,041] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,15]
+[INFO] [2017-03-30 20:14:01,046] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,15] in 5 milliseconds.
+[INFO] [2017-03-30 20:14:01,046] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,21]
+[INFO] [2017-03-30 20:14:01,047] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 2: Expanding ISR for partition [__consumer_offsets,25] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,047] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,21] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,047] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,27]
+[INFO] [2017-03-30 20:14:01,048] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,27] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,048] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,35] on broker 2: Expanding ISR for partition [__consumer_offsets,35] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,048] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,33]
+[INFO] [2017-03-30 20:14:01,049] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,33] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,049] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,39]
+[INFO] [2017-03-30 20:14:01,050] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,39] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,050] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,1]
+[INFO] [2017-03-30 20:14:01,065] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,1] in 15 milliseconds.
+[INFO] [2017-03-30 20:14:01,065] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,45]
+[INFO] [2017-03-30 20:14:01,066] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,45] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,066] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,7]
+[INFO] [2017-03-30 20:14:01,067] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,7] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,067] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,13]
+[INFO] [2017-03-30 20:14:01,068] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,41] on broker 2: Expanding ISR for partition [__consumer_offsets,41] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,068] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,13] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,068] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Loading offsets and group metadata from [__consumer_offsets,19]
+[INFO] [2017-03-30 20:14:01,069] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 2]: Finished loading offsets from [__consumer_offsets,19] in 1 milliseconds.
+[INFO] [2017-03-30 20:14:01,069] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,33] on broker 2: Expanding ISR for partition [__consumer_offsets,33] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,071] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,23] on broker 2: Expanding ISR for partition [__consumer_offsets,23] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,072] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 2: Expanding ISR for partition [__consumer_offsets,49] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,074] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,47] on broker 2: Expanding ISR for partition [__consumer_offsets,47] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,075] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 2: Expanding ISR for partition [__consumer_offsets,31] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,075] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,3] on broker 2: Expanding ISR for partition [__consumer_offsets,3] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,076] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 2: Expanding ISR for partition [__consumer_offsets,37] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,077] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,15] on broker 2: Expanding ISR for partition [__consumer_offsets,15] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,079] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,17] on broker 2: Expanding ISR for partition [__consumer_offsets,17] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,082] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 2: Expanding ISR for partition [__consumer_offsets,19] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,083] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,11] on broker 2: Expanding ISR for partition [__consumer_offsets,11] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,084] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 2: Expanding ISR for partition [__consumer_offsets,13] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,085] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 2: Expanding ISR for partition [__consumer_offsets,43] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,086] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,39] on broker 2: Expanding ISR for partition [__consumer_offsets,39] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,088] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,45] on broker 2: Expanding ISR for partition [__consumer_offsets,45] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,089] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 2: Expanding ISR for partition [__consumer_offsets,1] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,093] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,5] on broker 2: Expanding ISR for partition [__consumer_offsets,5] from 2 to 2,0
+[INFO] [2017-03-30 20:14:01,094] [kafka-request-handler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,29] on broker 2: Expanding ISR for partition [__consumer_offsets,29] from 2 to 2,0
+[INFO] [2017-03-30 20:14:05,979] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-19
+[INFO] [2017-03-30 20:14:05,979] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-19 to offset 0.
+[INFO] [2017-03-30 20:14:05,984] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-19, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:05,985] [ReplicaFetcherThread-0-0] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-0], Starting 
+[INFO] [2017-03-30 20:14:05,988] [kafka-request-handler-7] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-47
+[INFO] [2017-03-30 20:14:05,988] [kafka-request-handler-7] [kafka.log.Log] - Truncating log __consumer_offsets-47 to offset 0.
+[INFO] [2017-03-30 20:14:05,989] [kafka-request-handler-7] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-47, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:05,992] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-29
+[INFO] [2017-03-30 20:14:05,992] [kafka-request-handler-2] [kafka.log.Log] - Truncating log __consumer_offsets-29 to offset 0.
+[INFO] [2017-03-30 20:14:05,994] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-29, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:05,998] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-41
+[INFO] [2017-03-30 20:14:05,998] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-41 to offset 0.
+[INFO] [2017-03-30 20:14:05,999] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-41, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,003] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-39
+[INFO] [2017-03-30 20:14:06,004] [kafka-request-handler-4] [kafka.log.Log] - Truncating log __consumer_offsets-39 to offset 0.
+[INFO] [2017-03-30 20:14:06,005] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-39, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,010] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-17
+[INFO] [2017-03-30 20:14:06,010] [kafka-request-handler-2] [kafka.log.Log] - Truncating log __consumer_offsets-17 to offset 0.
+[INFO] [2017-03-30 20:14:06,011] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-17, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,015] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-33
+[INFO] [2017-03-30 20:14:06,015] [kafka-request-handler-3] [kafka.log.Log] - Truncating log __consumer_offsets-33 to offset 0.
+[INFO] [2017-03-30 20:14:06,017] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-33, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,021] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-3
+[INFO] [2017-03-30 20:14:06,021] [kafka-request-handler-4] [kafka.log.Log] - Truncating log __consumer_offsets-3 to offset 0.
+[INFO] [2017-03-30 20:14:06,022] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-3, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,027] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-21
+[INFO] [2017-03-30 20:14:06,027] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-21 to offset 0.
+[INFO] [2017-03-30 20:14:06,028] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-21, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,034] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-5
+[INFO] [2017-03-30 20:14:06,034] [kafka-request-handler-0] [kafka.log.Log] - Truncating log __consumer_offsets-5 to offset 0.
+[INFO] [2017-03-30 20:14:06,037] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-5, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,040] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-23
+[INFO] [2017-03-30 20:14:06,040] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-23 to offset 0.
+[INFO] [2017-03-30 20:14:06,042] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-23, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,045] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-15
+[INFO] [2017-03-30 20:14:06,045] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-15 to offset 0.
+[INFO] [2017-03-30 20:14:06,046] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-15, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,049] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-11
+[INFO] [2017-03-30 20:14:06,049] [kafka-request-handler-1] [kafka.log.Log] - Truncating log __consumer_offsets-11 to offset 0.
+[INFO] [2017-03-30 20:14:06,051] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-11, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,053] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-13
+[INFO] [2017-03-30 20:14:06,053] [kafka-request-handler-3] [kafka.log.Log] - Truncating log __consumer_offsets-13 to offset 0.
+[INFO] [2017-03-30 20:14:06,055] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-13, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,058] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-49
+[INFO] [2017-03-30 20:14:06,058] [kafka-request-handler-0] [kafka.log.Log] - Truncating log __consumer_offsets-49 to offset 0.
+[INFO] [2017-03-30 20:14:06,059] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-49, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,065] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-37
+[INFO] [2017-03-30 20:14:06,065] [kafka-request-handler-1] [kafka.log.Log] - Truncating log __consumer_offsets-37 to offset 0.
+[INFO] [2017-03-30 20:14:06,067] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-37, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,070] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-31
+[INFO] [2017-03-30 20:14:06,070] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-31 to offset 0.
+[INFO] [2017-03-30 20:14:06,074] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-31, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,078] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-25
+[INFO] [2017-03-30 20:14:06,078] [kafka-request-handler-4] [kafka.log.Log] - Truncating log __consumer_offsets-25 to offset 0.
+[INFO] [2017-03-30 20:14:06,080] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-25, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,083] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-45
+[INFO] [2017-03-30 20:14:06,083] [kafka-request-handler-2] [kafka.log.Log] - Truncating log __consumer_offsets-45 to offset 0.
+[INFO] [2017-03-30 20:14:06,084] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-45, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,089] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-27
+[INFO] [2017-03-30 20:14:06,089] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-27 to offset 0.
+[INFO] [2017-03-30 20:14:06,091] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-27, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,093] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-43
+[INFO] [2017-03-30 20:14:06,093] [kafka-request-handler-1] [kafka.log.Log] - Truncating log __consumer_offsets-43 to offset 0.
+[INFO] [2017-03-30 20:14:06,095] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-43, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,098] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-35
+[INFO] [2017-03-30 20:14:06,098] [kafka-request-handler-3] [kafka.log.Log] - Truncating log __consumer_offsets-35 to offset 0.
+[INFO] [2017-03-30 20:14:06,100] [kafka-request-handler-3] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-35, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,105] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-7
+[INFO] [2017-03-30 20:14:06,105] [kafka-request-handler-4] [kafka.log.Log] - Truncating log __consumer_offsets-7 to offset 0.
+[INFO] [2017-03-30 20:14:06,107] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-7, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,111] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-9
+[INFO] [2017-03-30 20:14:06,111] [kafka-request-handler-2] [kafka.log.Log] - Truncating log __consumer_offsets-9 to offset 0.
+[INFO] [2017-03-30 20:14:06,113] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-9, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )
+[INFO] [2017-03-30 20:14:06,119] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-1
+[INFO] [2017-03-30 20:14:06,119] [kafka-request-handler-6] [kafka.log.Log] - Truncating log __consumer_offsets-1 to offset 0.
+[INFO] [2017-03-30 20:14:06,121] [kafka-request-handler-6] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List([__consumer_offsets-1, initOffset 0 to broker BrokerEndPoint(0,localhost,9092)] )

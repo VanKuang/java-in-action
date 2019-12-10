@@ -1,0 +1,4 @@
+[INFO] [2017-03-27 14:01:38,661] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-03-27 14:11:38,682] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-03-27 14:21:38,703] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-03-27 14:31:38,725] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds.

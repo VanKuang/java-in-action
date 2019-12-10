@@ -1,0 +1,166 @@
+[WARN] [2017-04-01 04:44:00,386] [ReplicaFetcherThread-0-1] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-1], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@3d19be8d
+java.io.IOException: Connection to 1 was disconnected before the response was read
+	at kafka.utils.NetworkClientBlockingOps$$anonfun$blockingSendAndReceive$extension$1$$anonfun$apply$1.apply(NetworkClientBlockingOps.scala:115)
+	at kafka.utils.NetworkClientBlockingOps$$anonfun$blockingSendAndReceive$extension$1$$anonfun$apply$1.apply(NetworkClientBlockingOps.scala:112)
+	at scala.Option.foreach(Option.scala:257)
+	at kafka.utils.NetworkClientBlockingOps$$anonfun$blockingSendAndReceive$extension$1.apply(NetworkClientBlockingOps.scala:112)
+	at kafka.utils.NetworkClientBlockingOps$$anonfun$blockingSendAndReceive$extension$1.apply(NetworkClientBlockingOps.scala:108)
+	at kafka.utils.NetworkClientBlockingOps$.recursivePoll$1(NetworkClientBlockingOps.scala:137)
+	at kafka.utils.NetworkClientBlockingOps$.kafka$utils$NetworkClientBlockingOps$$pollContinuously$extension(NetworkClientBlockingOps.scala:143)
+	at kafka.utils.NetworkClientBlockingOps$.blockingSendAndReceive$extension(NetworkClientBlockingOps.scala:108)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:253)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:01,381] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@5c09f55
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:03,398] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@58e5060f
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:05,404] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@43690aef
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:07,411] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@7bfeaa21
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:09,417] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@5696aa36
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:11,427] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@41dd08f5
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:13,446] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@79c5ea32
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:15,459] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@65b5744a
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:17,478] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@4d7a69e7
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:19,490] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@5631f822
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:21,500] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@2c5b234d
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:23,515] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@6cf840cb
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:25,537] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@589f8501
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:27,543] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@38896bc1
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[WARN] [2017-04-01 04:44:29,561] [ReplicaFetcherThread-0-2] [kafka.server.ReplicaFetcherThread] - [ReplicaFetcherThread-0-2], Error in fetch kafka.server.ReplicaFetcherThread$FetchRequest@c744d10
+java.io.IOException: Connection to localhost:9094 (id: 2 rack: null) failed
+	at kafka.utils.NetworkClientBlockingOps$.awaitReady$1(NetworkClientBlockingOps.scala:83)
+	at kafka.utils.NetworkClientBlockingOps$.blockingReady$extension(NetworkClientBlockingOps.scala:93)
+	at kafka.server.ReplicaFetcherThread.sendRequest(ReplicaFetcherThread.scala:248)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:238)
+	at kafka.server.ReplicaFetcherThread.fetch(ReplicaFetcherThread.scala:42)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:118)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:103)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)

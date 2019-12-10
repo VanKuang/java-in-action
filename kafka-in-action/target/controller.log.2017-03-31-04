@@ -1,0 +1,6 @@
+[INFO] [2017-03-31 05:14:44,303] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.KafkaController$SessionExpirationListener] - [SessionExpirationListener on 1], ZK expired; shut down all controller components and try to re-elect
+[DEBUG] [2017-03-31 05:14:44,307] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.KafkaController] - [Controller 1]: Controller resigning, broker id 1
+[DEBUG] [2017-03-31 05:14:44,307] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.KafkaController] - [Controller 1]: De-registering IsrChangeNotificationListener
+[INFO] [2017-03-31 05:14:44,308] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.PartitionStateMachine] - [Partition state machine on Controller 1]: Stopped partition state machine
+[INFO] [2017-03-31 05:14:44,308] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.ReplicaStateMachine] - [Replica state machine on controller 1]: Stopped replica state machine
+[INFO] [2017-03-31 05:14:44,308] [ZkClient-EventThread-16-localhost:2181] [kafka.controller.KafkaController] - [Controller 1]: Broker 1 resigned as the controller

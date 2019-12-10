@@ -1,0 +1,28 @@
+[INFO] [2017-03-31 14:36:56,714] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /controller (is it secure? false)
+[INFO] [2017-03-31 14:36:56,719] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-03-31 14:36:56,719] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector] - 0 successfully elected as leader
+[INFO] [2017-03-31 14:36:57,154] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 0
+[INFO] [2017-03-31 14:36:57,155] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/0 (is it secure? false)
+[INFO] [2017-03-31 14:36:57,159] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-03-31 14:36:57,159] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(localhost,9092,PLAINTEXT)
+[INFO] [2017-03-31 14:36:57,160] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-03-31 14:36:57,161] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-03-31 14:36:57,197] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Removed fetcher for partitions __consumer_offsets-17,__consumer_offsets-32,__consumer_offsets-14,__consumer_offsets-44,__consumer_offsets-47,__consumer_offsets-29,__consumer_offsets-11,__consumer_offsets-41,__consumer_offsets-26,__consumer_offsets-23,__consumer_offsets-8,__consumer_offsets-38,__consumer_offsets-20,__consumer_offsets-5,__consumer_offsets-2,__consumer_offsets-35
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-32 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-44 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-17 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-23 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-29 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-35 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-41 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-38 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-8 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-5 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-11 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-20 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-47 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-2 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-14 to offset 0.
+[INFO] [2017-03-31 14:36:57,199] [kafka-request-handler-5] [kafka.log.Log] - Truncating log __consumer_offsets-26 to offset 0.
+[INFO] [2017-03-31 14:36:57,206] [kafka-request-handler-5] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Added fetcher for partitions List([__consumer_offsets-8, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-35, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-41, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-23, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-47, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-38, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-17, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-11, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-2, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-14, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-20, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-44, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-5, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-26, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] , [__consumer_offsets-29, initOffset 0 to broker BrokerEndPoint(2,localhost,9094)] , [__consumer_offsets-32, initOffset 0 to broker BrokerEndPoint(1,localhost,9093)] )
+[INFO] [2017-03-31 14:36:57,207] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 0

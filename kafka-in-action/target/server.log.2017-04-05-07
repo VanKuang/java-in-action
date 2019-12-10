@@ -1,0 +1,61 @@
+[INFO] [2017-04-05 09:23:44,458] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 2: Shrinking ISR for partition [__consumer_offsets,37] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,151] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,40] on broker 2: Shrinking ISR for partition [__consumer_offsets,40] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,172] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,46] on broker 2: Shrinking ISR for partition [__consumer_offsets,46] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,176] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,16] on broker 2: Shrinking ISR for partition [__consumer_offsets,16] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,180] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 2: Shrinking ISR for partition [__consumer_offsets,49] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,182] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 2: Shrinking ISR for partition [__consumer_offsets,31] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,188] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 2: Shrinking ISR for partition [__consumer_offsets,13] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,188] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 2
+[INFO] [2017-04-05 09:23:45,189] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 2: Shrinking ISR for partition [__consumer_offsets,7] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,190] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/2 (is it secure? false)
+[INFO] [2017-04-05 09:23:45,192] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 2: Shrinking ISR for partition [__consumer_offsets,1] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,196] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-04-05 09:23:45,196] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 2 at path /brokers/ids/2 with addresses: PLAINTEXT -> EndPoint(localhost,9094,PLAINTEXT)
+[INFO] [2017-04-05 09:23:45,196] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-04-05 09:23:45,196] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-04-05 09:23:45,197] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,10] on broker 2: Shrinking ISR for partition [__consumer_offsets,10] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,200] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,4] on broker 2: Shrinking ISR for partition [__consumer_offsets,4] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,203] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,28] on broker 2: Shrinking ISR for partition [__consumer_offsets,28] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,204] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 2: Shrinking ISR for partition [__consumer_offsets,43] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,205] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,22] on broker 2: Shrinking ISR for partition [__consumer_offsets,22] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,206] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,34] on broker 2: Shrinking ISR for partition [__consumer_offsets,34] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,208] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 2: Shrinking ISR for partition [__consumer_offsets,19] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,208] [kafka-scheduler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 2: Shrinking ISR for partition [__consumer_offsets,25] from 2,0,1 to 2
+[INFO] [2017-04-05 09:23:45,210] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 0
+[INFO] [2017-04-05 09:23:46,091] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions __consumer_offsets-22,__consumer_offsets-4,__consumer_offsets-7,__consumer_offsets-46,__consumer_offsets-25,__consumer_offsets-49,__consumer_offsets-16,__consumer_offsets-28,__consumer_offsets-31,__consumer_offsets-37,__consumer_offsets-19,__consumer_offsets-13,__consumer_offsets-43,__consumer_offsets-1,__consumer_offsets-34,__consumer_offsets-10,__consumer_offsets-40
+[INFO] [2017-04-05 09:23:46,096] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Removed fetcher for partitions 
+[INFO] [2017-04-05 09:23:46,099] [kafka-request-handler-1] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 2] Added fetcher for partitions List()
+[INFO] [2017-04-05 09:23:46,877] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,28] on broker 2: Expanding ISR for partition [__consumer_offsets,28] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,878] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 2: Expanding ISR for partition [__consumer_offsets,43] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,879] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,10] on broker 2: Expanding ISR for partition [__consumer_offsets,10] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,879] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 2: Expanding ISR for partition [__consumer_offsets,25] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,879] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 2: Expanding ISR for partition [__consumer_offsets,7] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,880] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,40] on broker 2: Expanding ISR for partition [__consumer_offsets,40] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,880] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 2: Expanding ISR for partition [__consumer_offsets,37] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,881] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,22] on broker 2: Expanding ISR for partition [__consumer_offsets,22] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,881] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,4] on broker 2: Expanding ISR for partition [__consumer_offsets,4] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,882] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,34] on broker 2: Expanding ISR for partition [__consumer_offsets,34] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,885] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 2: Expanding ISR for partition [__consumer_offsets,19] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,885] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,16] on broker 2: Expanding ISR for partition [__consumer_offsets,16] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,887] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 2: Expanding ISR for partition [__consumer_offsets,49] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,888] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 2: Expanding ISR for partition [__consumer_offsets,1] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,889] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 2: Expanding ISR for partition [__consumer_offsets,31] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,890] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 2: Expanding ISR for partition [__consumer_offsets,13] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,891] [kafka-request-handler-7] [kafka.cluster.Partition] - Partition [__consumer_offsets,46] on broker 2: Expanding ISR for partition [__consumer_offsets,46] from 2 to 2,1
+[INFO] [2017-04-05 09:23:46,898] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,28] on broker 2: Expanding ISR for partition [__consumer_offsets,28] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,899] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 2: Expanding ISR for partition [__consumer_offsets,43] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,900] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,10] on broker 2: Expanding ISR for partition [__consumer_offsets,10] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,901] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 2: Expanding ISR for partition [__consumer_offsets,25] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,902] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 2: Expanding ISR for partition [__consumer_offsets,7] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,903] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,40] on broker 2: Expanding ISR for partition [__consumer_offsets,40] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,904] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 2: Expanding ISR for partition [__consumer_offsets,37] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,907] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,22] on broker 2: Expanding ISR for partition [__consumer_offsets,22] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,909] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,4] on broker 2: Expanding ISR for partition [__consumer_offsets,4] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,911] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,34] on broker 2: Expanding ISR for partition [__consumer_offsets,34] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,912] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 2: Expanding ISR for partition [__consumer_offsets,19] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,914] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,16] on broker 2: Expanding ISR for partition [__consumer_offsets,16] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,917] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 2: Expanding ISR for partition [__consumer_offsets,49] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,918] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 2: Expanding ISR for partition [__consumer_offsets,1] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,920] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 2: Expanding ISR for partition [__consumer_offsets,31] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,921] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 2: Expanding ISR for partition [__consumer_offsets,13] from 2,1 to 2,1,0
+[INFO] [2017-04-05 09:23:46,921] [kafka-request-handler-2] [kafka.cluster.Partition] - Partition [__consumer_offsets,46] on broker 2: Expanding ISR for partition [__consumer_offsets,46] from 2,1 to 2,1,0

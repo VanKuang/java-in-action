@@ -1,0 +1,13 @@
+[INFO] [2017-04-03 16:36:50,770] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /controller (is it secure? false)
+[INFO] [2017-04-03 16:36:50,776] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-04-03 16:36:50,776] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector] - 0 successfully elected as leader
+[INFO] [2017-04-03 16:36:51,598] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 0
+[INFO] [2017-04-03 16:36:51,607] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/0 (is it secure? false)
+[INFO] [2017-04-03 16:36:51,611] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-04-03 16:36:51,611] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(localhost,9092,PLAINTEXT)
+[INFO] [2017-04-03 16:36:51,613] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-04-03 16:36:51,613] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-04-03 16:36:51,970] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Removed fetcher for partitions __consumer_offsets-8,__consumer_offsets-35,__consumer_offsets-41,__consumer_offsets-23,__consumer_offsets-47,__consumer_offsets-38,__consumer_offsets-17,__consumer_offsets-11,__consumer_offsets-2,__consumer_offsets-14,__consumer_offsets-20,__consumer_offsets-44,__consumer_offsets-5,__consumer_offsets-26,__consumer_offsets-29,__consumer_offsets-32
+[INFO] [2017-04-03 16:36:51,977] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Removed fetcher for partitions 
+[INFO] [2017-04-03 16:36:51,978] [kafka-request-handler-0] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Added fetcher for partitions List()
+[INFO] [2017-04-03 16:36:52,004] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 0

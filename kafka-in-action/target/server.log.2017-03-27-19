@@ -1,0 +1,9 @@
+[INFO] [2017-03-27 19:49:25,426] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/0 (is it secure? false)
+[ERROR] [2017-03-27 19:49:25,528] [main-SendThread(localhost:2181)] [kafka.utils.ZKCheckedEphemeral] - Session has expired while creating /brokers
+[ERROR] [2017-03-27 19:49:25,528] [main-SendThread(localhost:2181)] [kafka.utils.ZKCheckedEphemeral] - Session has expired while creating /brokers/ids
+[ERROR] [2017-03-27 19:49:25,528] [main-SendThread(localhost:2181)] [kafka.utils.ZKCheckedEphemeral] - Session has expired while creating /brokers/ids/0
+[INFO] [2017-03-27 19:49:25,528] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: SESSIONEXPIRED
+[INFO] [2017-03-27 19:49:25,539] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /controller (is it secure? false)
+[INFO] [2017-03-27 19:49:25,541] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-03-27 19:49:25,541] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector] - 0 successfully elected as leader
+[INFO] [2017-03-27 19:49:25,710] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 0

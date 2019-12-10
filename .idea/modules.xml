@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/disruptor-in-action/disruptor-in-action.iml" filepath="$PROJECT_DIR$/disruptor-in-action/disruptor-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-in-action/flink-in-action.iml" filepath="$PROJECT_DIR$/flink-in-action/flink-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/guice-in-action/guice-in-action.iml" filepath="$PROJECT_DIR$/guice-in-action/guice-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-core/java-core.iml" filepath="$PROJECT_DIR$/java-core/java-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-in-action.iml" filepath="$PROJECT_DIR$/.idea/java-in-action.iml" />
@@ -13,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/netty-in-action/netty-in-action.iml" filepath="$PROJECT_DIR$/netty-in-action/netty-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/open-tracing-in-action/open-tracing-in-action.iml" filepath="$PROJECT_DIR$/open-tracing-in-action/open-tracing-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-in-action/redis-in-action.iml" filepath="$PROJECT_DIR$/redis-in-action/redis-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rx/rx.iml" filepath="$PROJECT_DIR$/rx/rx.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava-in-action/rxjava-in-action.iml" filepath="$PROJECT_DIR$/rxjava-in-action/rxjava-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-in-action/spring-boot-in-action.iml" filepath="$PROJECT_DIR$/spring-boot-in-action/spring-boot-in-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/vertx-in-action/vertx-in-action.iml" filepath="$PROJECT_DIR$/vertx-in-action/vertx-in-action.iml" />

@@ -1,0 +1,61 @@
+[INFO] [2017-03-31 00:14:38,125] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 0: Shrinking ISR for partition [__consumer_offsets,37] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,795] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,33] on broker 0: Shrinking ISR for partition [__consumer_offsets,33] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,796] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,15] on broker 0: Shrinking ISR for partition [__consumer_offsets,15] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,800] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,29] on broker 0: Shrinking ISR for partition [__consumer_offsets,29] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,801] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,5] on broker 0: Shrinking ISR for partition [__consumer_offsets,5] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,802] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,11] on broker 0: Shrinking ISR for partition [__consumer_offsets,11] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,804] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 0: Shrinking ISR for partition [__consumer_offsets,49] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,805] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 0: Shrinking ISR for partition [__consumer_offsets,31] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,806] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 0: Shrinking ISR for partition [__consumer_offsets,13] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,808] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,47] on broker 0: Shrinking ISR for partition [__consumer_offsets,47] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,809] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 0: Shrinking ISR for partition [__consumer_offsets,7] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,811] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 0
+[INFO] [2017-03-31 00:14:38,813] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 0: Shrinking ISR for partition [__consumer_offsets,1] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,814] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/0 (is it secure? false)
+[INFO] [2017-03-31 00:14:38,815] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,17] on broker 0: Shrinking ISR for partition [__consumer_offsets,17] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,817] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-03-31 00:14:38,818] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 0 at path /brokers/ids/0 with addresses: PLAINTEXT -> EndPoint(localhost,9092,PLAINTEXT)
+[INFO] [2017-03-31 00:14:38,818] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-03-31 00:14:38,818] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-03-31 00:14:38,818] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,9] on broker 0: Shrinking ISR for partition [__consumer_offsets,9] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,819] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,21] on broker 0: Shrinking ISR for partition [__consumer_offsets,21] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,820] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,3] on broker 0: Shrinking ISR for partition [__consumer_offsets,3] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,822] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,23] on broker 0: Shrinking ISR for partition [__consumer_offsets,23] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,824] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,39] on broker 0: Shrinking ISR for partition [__consumer_offsets,39] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,825] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 0: Shrinking ISR for partition [__consumer_offsets,43] from 0,2 to 0
+[INFO] [2017-03-31 00:14:38,828] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,35] on broker 0: Shrinking ISR for partition [__consumer_offsets,35] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,829] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,41] on broker 0: Shrinking ISR for partition [__consumer_offsets,41] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,833] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 0: Shrinking ISR for partition [__consumer_offsets,19] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,835] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 1
+[INFO] [2017-03-31 00:14:38,836] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,27] on broker 0: Shrinking ISR for partition [__consumer_offsets,27] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,837] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 0: Shrinking ISR for partition [__consumer_offsets,25] from 2,0 to 0
+[INFO] [2017-03-31 00:14:38,837] [kafka-scheduler-4] [kafka.cluster.Partition] - Partition [__consumer_offsets,45] on broker 0: Shrinking ISR for partition [__consumer_offsets,45] from 0,2 to 0
+[INFO] [2017-03-31 00:14:39,335] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Removed fetcher for partitions __consumer_offsets-21,__consumer_offsets-27,__consumer_offsets-7,__consumer_offsets-9,__consumer_offsets-25,__consumer_offsets-35,__consumer_offsets-41,__consumer_offsets-33,__consumer_offsets-23,__consumer_offsets-49,__consumer_offsets-47,__consumer_offsets-31,__consumer_offsets-3,__consumer_offsets-37,__consumer_offsets-15,__consumer_offsets-17,__consumer_offsets-19,__consumer_offsets-11,__consumer_offsets-13,__consumer_offsets-43,__consumer_offsets-39,avro_base_topic-1-0,__consumer_offsets-45,__consumer_offsets-1,__consumer_offsets-5,__consumer_offsets-29
+[INFO] [2017-03-31 00:14:39,343] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Removed fetcher for partitions 
+[INFO] [2017-03-31 00:14:39,345] [kafka-request-handler-4] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 0] Added fetcher for partitions List()
+[INFO] [2017-03-31 00:14:40,161] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,17] on broker 0: Expanding ISR for partition [__consumer_offsets,17] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,163] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,39] on broker 0: Expanding ISR for partition [__consumer_offsets,39] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,164] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,21] on broker 0: Expanding ISR for partition [__consumer_offsets,21] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,165] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,43] on broker 0: Expanding ISR for partition [__consumer_offsets,43] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,165] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,3] on broker 0: Expanding ISR for partition [__consumer_offsets,3] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,167] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,47] on broker 0: Expanding ISR for partition [__consumer_offsets,47] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,167] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,25] on broker 0: Expanding ISR for partition [__consumer_offsets,25] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,168] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,7] on broker 0: Expanding ISR for partition [__consumer_offsets,7] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,169] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,29] on broker 0: Expanding ISR for partition [__consumer_offsets,29] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,169] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,37] on broker 0: Expanding ISR for partition [__consumer_offsets,37] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,170] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,11] on broker 0: Expanding ISR for partition [__consumer_offsets,11] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,171] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,41] on broker 0: Expanding ISR for partition [__consumer_offsets,41] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,172] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,33] on broker 0: Expanding ISR for partition [__consumer_offsets,33] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,172] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,15] on broker 0: Expanding ISR for partition [__consumer_offsets,15] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,173] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,23] on broker 0: Expanding ISR for partition [__consumer_offsets,23] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,174] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,45] on broker 0: Expanding ISR for partition [__consumer_offsets,45] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,175] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,19] on broker 0: Expanding ISR for partition [__consumer_offsets,19] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,176] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,49] on broker 0: Expanding ISR for partition [__consumer_offsets,49] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,177] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,27] on broker 0: Expanding ISR for partition [__consumer_offsets,27] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,178] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,1] on broker 0: Expanding ISR for partition [__consumer_offsets,1] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,179] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,9] on broker 0: Expanding ISR for partition [__consumer_offsets,9] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,180] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,31] on broker 0: Expanding ISR for partition [__consumer_offsets,31] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,180] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,5] on broker 0: Expanding ISR for partition [__consumer_offsets,5] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,181] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,13] on broker 0: Expanding ISR for partition [__consumer_offsets,13] from 0 to 0,2
+[INFO] [2017-03-31 00:14:40,181] [kafka-request-handler-0] [kafka.cluster.Partition] - Partition [__consumer_offsets,35] on broker 0: Expanding ISR for partition [__consumer_offsets,35] from 0 to 0,2
+[INFO] [2017-03-31 00:14:50,335] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds.

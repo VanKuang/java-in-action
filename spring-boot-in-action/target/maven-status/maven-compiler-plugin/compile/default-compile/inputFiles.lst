@@ -1,0 +1,6 @@
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/model/Player.java
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/model/PlayerBuilder.java
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/Application.java
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/repository/PlayerRepository.java
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/service/PlayerService.java
+/Users/VanKuang/Development/workspace/java-in-action/spring-boot-in-action/src/main/java/cn/van/kuang/spring/boot/contoller/PlayerController.java

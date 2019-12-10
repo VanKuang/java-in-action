@@ -1,0 +1,16 @@
+[INFO] [2017-04-04 21:04:23,682] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 1
+[INFO] [2017-04-04 21:04:23,684] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/1 (is it secure? false)
+[INFO] [2017-04-04 21:04:23,691] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
+[INFO] [2017-04-04 21:04:23,692] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 1 at path /brokers/ids/1 with addresses: PLAINTEXT -> EndPoint(localhost,9093,PLAINTEXT)
+[INFO] [2017-04-04 21:04:23,693] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
+[INFO] [2017-04-04 21:04:23,693] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
+[INFO] [2017-04-04 21:04:23,704] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 2
+[INFO] [2017-04-04 21:04:24,996] [kafka-request-handler-7] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 1] Removed fetcher for partitions __consumer_offsets-30,__consumer_offsets-21,__consumer_offsets-27,__consumer_offsets-9,avro_base_topic-0,__consumer_offsets-33,__consumer_offsets-36,__consumer_offsets-42,__consumer_offsets-3,__consumer_offsets-18,__consumer_offsets-15,__consumer_offsets-24,__consumer_offsets-48,__consumer_offsets-6,__consumer_offsets-0,__consumer_offsets-39,__consumer_offsets-12,__consumer_offsets-45
+[INFO] [2017-04-04 21:04:25,003] [kafka-request-handler-7] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 1] Removed fetcher for partitions 
+[INFO] [2017-04-04 21:04:25,004] [kafka-request-handler-7] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 1] Added fetcher for partitions List()
+[INFO] [2017-04-04 21:09:54,128] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-04-04 21:19:54,141] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-04-04 21:29:54,155] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 1 milliseconds.
+[INFO] [2017-04-04 21:39:54,176] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-04-04 21:49:54,195] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 0 milliseconds.
+[INFO] [2017-04-04 21:59:54,213] [group-metadata-manager-0] [kafka.coordinator.GroupMetadataManager] - [Group Metadata Manager on Broker 1]: Removed 0 expired offsets in 0 milliseconds.

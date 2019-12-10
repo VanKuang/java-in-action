@@ -1,0 +1,39 @@
+[INFO] [2017-04-08 13:20:51,948] [main] [kafka.log.LogCleaner] - Starting the log cleaner
+[INFO] [2017-04-08 13:20:51,949] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Starting 
+[INFO] [2017-04-08 13:23:47,274] [Thread-2] [kafka.log.LogCleaner] - Shutting down the log cleaner.
+[INFO] [2017-04-08 13:23:47,274] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutting down
+[INFO] [2017-04-08 13:23:47,274] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Stopped 
+[INFO] [2017-04-08 13:23:47,274] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutdown completed
+[INFO] [2017-04-08 13:23:56,259] [main] [kafka.log.LogCleaner] - Starting the log cleaner
+[INFO] [2017-04-08 13:23:56,262] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Starting 
+[ERROR] [2017-04-08 13:24:56,324] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Error due to 
+java.io.FileNotFoundException: /Users/VanKuang/Development/tmp/kafka-logs/cleaner-offset-checkpoint (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at kafka.server.OffsetCheckpoint.read(OffsetCheckpoint.scala:84)
+	at kafka.log.LogCleanerManager$$anonfun$allCleanerCheckpoints$1.apply(LogCleanerManager.scala:75)
+	at kafka.log.LogCleanerManager$$anonfun$allCleanerCheckpoints$1.apply(LogCleanerManager.scala:75)
+	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)
+	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.MapLike$DefaultValuesIterable.foreach(MapLike.scala:206)
+	at scala.collection.TraversableLike$class.flatMap(TraversableLike.scala:241)
+	at scala.collection.AbstractTraversable.flatMap(Traversable.scala:104)
+	at kafka.log.LogCleanerManager.allCleanerCheckpoints(LogCleanerManager.scala:75)
+	at kafka.log.LogCleanerManager$$anonfun$grabFilthiestCompactedLog$1.apply(LogCleanerManager.scala:85)
+	at kafka.log.LogCleanerManager$$anonfun$grabFilthiestCompactedLog$1.apply(LogCleanerManager.scala:83)
+	at kafka.utils.CoreUtils$.inLock(CoreUtils.scala:234)
+	at kafka.log.LogCleanerManager.grabFilthiestCompactedLog(LogCleanerManager.scala:83)
+	at kafka.log.LogCleaner$CleanerThread.cleanOrSleep(LogCleaner.scala:232)
+	at kafka.log.LogCleaner$CleanerThread.doWork(LogCleaner.scala:218)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+[INFO] [2017-04-08 13:24:56,326] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Stopped 
+[INFO] [2017-04-08 13:25:20,588] [main] [kafka.log.LogCleaner] - Starting the log cleaner
+[INFO] [2017-04-08 13:25:20,590] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Starting 
+[INFO] [2017-04-08 13:31:40,528] [Thread-2] [kafka.log.LogCleaner] - Shutting down the log cleaner.
+[INFO] [2017-04-08 13:31:40,530] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutting down
+[INFO] [2017-04-08 13:31:40,530] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Stopped 
+[INFO] [2017-04-08 13:31:40,530] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutdown completed
