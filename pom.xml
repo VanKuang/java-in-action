@@ -25,7 +25,6 @@
         <module>guice-in-action</module>
         <module>jgroups-in-action</module>
         <module>rx</module>
-        <module>flink-in-action</module>
     </modules>
 
     <dependencies>

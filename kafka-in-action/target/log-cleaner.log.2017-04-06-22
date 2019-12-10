@@ -1,4 +1,0 @@
-[INFO] [2017-04-06 22:01:51,507] [Thread-2] [kafka.log.LogCleaner] - Shutting down the log cleaner.
-[INFO] [2017-04-06 22:01:51,516] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutting down
-[INFO] [2017-04-06 22:01:51,516] [kafka-log-cleaner-thread-0] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Stopped 
-[INFO] [2017-04-06 22:01:51,516] [Thread-2] [kafka.log.LogCleaner] - [kafka-log-cleaner-thread-0], Shutdown completed

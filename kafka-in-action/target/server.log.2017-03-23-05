@@ -1,6 +1,0 @@
-[INFO] [2017-03-23 05:17:15,187] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /controller (is it secure? false)
-[INFO] [2017-03-23 05:17:15,191] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
-[INFO] [2017-03-23 05:17:15,191] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector] - 0 successfully elected as leader
-[INFO] [2017-03-23 05:17:16,043] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 0
-[INFO] [2017-03-23 05:17:36,067] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/0 (is it secure? false)
-[INFO] [2017-03-23 05:17:36,071] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK

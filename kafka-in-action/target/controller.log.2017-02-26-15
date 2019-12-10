@@ -1,6 +1,0 @@
-[2017-02-26 15:01:13,442] TRACE [Controller 0]: checking need to trigger partition rebalance (kafka.controller.KafkaController)
-[2017-02-26 15:01:13,446] DEBUG [Controller 0]: preferred replicas by broker Map() (kafka.controller.KafkaController)
-[2017-02-26 15:06:13,452] TRACE [Controller 0]: checking need to trigger partition rebalance (kafka.controller.KafkaController)
-[2017-02-26 15:06:13,453] DEBUG [Controller 0]: preferred replicas by broker Map() (kafka.controller.KafkaController)
-[2017-02-26 15:11:13,461] TRACE [Controller 0]: checking need to trigger partition rebalance (kafka.controller.KafkaController)
-[2017-02-26 15:11:13,462] DEBUG [Controller 0]: preferred replicas by broker Map() (kafka.controller.KafkaController)

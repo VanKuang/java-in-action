@@ -1,8 +1,0 @@
-[INFO] [2017-03-31 05:14:44,317] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - re-registering broker info in ZK for broker 1
-[INFO] [2017-03-31 05:14:44,319] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Creating /brokers/ids/1 (is it secure? false)
-[INFO] [2017-03-31 05:14:44,322] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZKCheckedEphemeral] - Result of znode creation is: OK
-[INFO] [2017-03-31 05:14:44,322] [ZkClient-EventThread-16-localhost:2181] [kafka.utils.ZkUtils] - Registered broker 1 at path /brokers/ids/1 with addresses: PLAINTEXT -> EndPoint(localhost,9093,PLAINTEXT)
-[INFO] [2017-03-31 05:14:44,322] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - done re-registering broker
-[INFO] [2017-03-31 05:14:44,323] [ZkClient-EventThread-16-localhost:2181] [kafka.server.KafkaHealthcheck$SessionExpireListener] - Subscribing to /brokers/topics path to watch for new topics
-[INFO] [2017-03-31 05:14:44,335] [ZkClient-EventThread-16-localhost:2181] [kafka.server.ZookeeperLeaderElector$LeaderChangeListener] - New leader is 2
-[INFO] [2017-03-31 05:14:45,104] [kafka-request-handler-2] [kafka.server.ReplicaFetcherManager] - [ReplicaFetcherManager on broker 1] Removed fetcher for partitions avro_base_topic-0
