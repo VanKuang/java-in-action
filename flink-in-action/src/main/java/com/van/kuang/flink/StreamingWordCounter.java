@@ -1,20 +1,20 @@
 package com.van.kuang.flink;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
-import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
-public class WordCounter {
+public class StreamingWordCounter {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStreamSource<String> source = env.socketTextStream("localhost", 9999, "\n");
 
-        SingleOutputStreamOperator<WordCount> sum = source.flatMap(
+        DataStream<WordCount> sum = source.flatMap(
                 new FlatMapFunction<String, WordCount>() {
                     @Override
                     public void flatMap(String value, Collector<WordCount> collector) throws Exception {
