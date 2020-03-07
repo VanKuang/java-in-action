@@ -26,6 +26,7 @@
         <module>jgroups-in-action</module>
         <module>rx</module>
         <module>flink-in-action</module>
+        <module>okhttp-in-action</module>
     </modules>
 
     <dependencies>
