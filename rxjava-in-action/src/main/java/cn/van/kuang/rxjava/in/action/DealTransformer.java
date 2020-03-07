@@ -1,6 +1,7 @@
 package cn.van.kuang.rxjava.in.action;
 
-import rx.Observable;
+
+import io.reactivex.rxjava3.core.Observable;
 
 import java.math.BigDecimal;
 

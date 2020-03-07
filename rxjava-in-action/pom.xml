@@ -13,15 +13,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.reactivex</groupId>
+            <groupId>io.reactivex.rxjava3</groupId>
             <artifactId>rxjava</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-bus</artifactId>
-            <version>2.0.8.RELEASE</version>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 
