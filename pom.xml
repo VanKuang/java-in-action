@@ -27,6 +27,7 @@
         <module>rx</module>
         <module>flink-in-action</module>
         <module>okhttp-in-action</module>
+        <module>etcd-in-action</module>
     </modules>
 
     <dependencies>
