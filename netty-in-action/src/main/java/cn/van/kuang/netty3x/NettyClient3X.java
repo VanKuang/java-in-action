@@ -25,7 +25,7 @@ public class NettyClient3X {
 
     public void start() throws Exception {
         System.setProperty("javax.net.ssl.trustStore", "/Users/VanKuang/Development/workspace/java-in-action/keystore.jks");
-        System.setProperty("javax.net.ssl.trustStorePassword", "1234@qwer");
+        System.setProperty("javax.net.ssl.trustStorePassword", "*******");
 
         final SSLEngine sslEngine = SSLContext.getDefault().createSSLEngine();
         sslEngine.setUseClientMode(true);

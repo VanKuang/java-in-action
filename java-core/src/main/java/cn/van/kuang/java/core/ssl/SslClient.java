@@ -9,7 +9,7 @@ public class SslClient {
 
     public static void main(String[] args) throws Exception {
         System.setProperty("javax.net.ssl.trustStore", "/Users/VanKuang/Development/workspace/hello-world-in-java/src/main/resources/keystore");
-        System.setProperty("javax.net.ssl.trustStorePassword", "1234@qwer");
+        System.setProperty("javax.net.ssl.trustStorePassword", "*******");
 
         SocketFactory socketFactory = SSLSocketFactory.getDefault();
         Socket socket = socketFactory.createSocket("localhost", 9999);

@@ -12,7 +12,7 @@ public class SslServer {
 
     public static void main(String[] args) throws Exception {
         System.setProperty("javax.net.ssl.keyStore", "/Users/VanKuang/Development/workspace/hello-world-in-java/src/main/resources/keystore");
-        System.setProperty("javax.net.ssl.keyStorePassword", "1234@qwer");
+        System.setProperty("javax.net.ssl.keyStorePassword", "*******");
 
         ServerSocketFactory socketFactory = SSLServerSocketFactory.getDefault();
         ServerSocket serverSocket = socketFactory.createServerSocket(9999);

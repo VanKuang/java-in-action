@@ -97,8 +97,8 @@ public class JerseyServer {
     private SslContextFactory createSslContextFactory() {
         SslContextFactory factory = new SslContextFactory();
         factory.setKeyStorePath("/Users/VanKuang/Development/workspace/java-in-action/java-core/src/main/resources/keystore");
-        factory.setKeyStorePassword("1234@qwer");
-        factory.setKeyManagerPassword("1234@qwer");
+        factory.setKeyStorePassword("*******");
+        factory.setKeyManagerPassword("*******");
         return factory;
     }
 

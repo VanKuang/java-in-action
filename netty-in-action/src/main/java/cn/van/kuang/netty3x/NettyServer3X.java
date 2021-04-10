@@ -29,7 +29,7 @@ public class NettyServer3X {
 
     public void start() throws Exception {
         System.setProperty("javax.net.ssl.keyStore", "/Users/VanKuang/Development/workspace/java-in-action/keystore.jks");
-        System.setProperty("javax.net.ssl.keyStorePassword", "1234@qwer");
+        System.setProperty("javax.net.ssl.keyStorePassword", "*******");
 
         final SSLEngine sslEngine = SSLContext.getDefault().createSSLEngine();
         sslEngine.setUseClientMode(false);
